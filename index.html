@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshaya Santhosh | Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+<!-- HERO SECTION -->
+<header class="hero">
+    <div class="hero-content">
+        <h1>Akshaya Santhosh</h1>
+        <p>Visual Designer • Motion Artist • Creative Thinker</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+</header>
+
+<!-- ABOUT SECTION -->
+<section class="about">
+    <h2>About Me</h2>
+    <p>
+        I create visually compelling designs that combine creativity and strategy.
+        My work focuses on branding, motion design, video editing, and digital storytelling.
+    </p>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects">
+    <div class="projects-header">
+        <h2>Selected Works</h2>
+        <p>Photoshop • Illustrator • After Effects • Premiere Pro</p>
+    </div>
+
+    <div class="projects-slider">
+
+        <!-- Left Arrow -->
+        <button class="arrow left">&#10094;</button>
+
+        <!-- Slider Track -->
+        <div class="slider-container">
+            <div class="project-track">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Brand Identity System" />
+                    <div class="project-info">
+                        <h3>Brand Identity System</h3>
+                        <div class="tags">
+                            <span>Brand Strategy</span>
+                            <span>Logo Design</span>
+                            <span>Brand Identity</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="images/project2.jpg" alt="Packaging Design" />
+                    <div class="project-info">
+                        <h3>Packaging Design</h3>
+                        <div class="tags">
+                            <span>Packaging</span>
+                            <span>Photoshop</span>
+                            <span>Mockup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="images/project3.jpg" alt="Motion Graphics" />
+                    <div class="project-info">
+                        <h3>Motion Graphics</h3>
+                        <div class="tags">
+                            <span>After Effects</span>
+                            <span>Animation</span>
+                            <span>Video Editing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="images/project4.jpg" alt="YouTube Thumbnails" />
+                    <div class="project-info">
+                        <h3>YouTube Thumbnails</h3>
+                        <div class="tags">
+                            <span>Thumbnail Design</span>
+                            <span>Photoshop</span>
+                            <span>Branding</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <button class="arrow right">&#10095;</button>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact">
+    <h2>Let's Work Together</h2>
+    <p>Email: akshayasanthosh2000@gmail.com</p>
+    <p>Instagram: @yourhandle</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Akshaya Santhosh. All Rights Reserved.</p>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+const track = document.querySelector('.project-track');
+const cards = document.querySelectorAll('.project-card');
+const nextBtn = document.querySelector('.right');
+const prevBtn = document.querySelector('.left');
+
+let currentIndex = 0;
+const visibleCards = 2;
+
+function updateSlider() {
+    const cardWidth = cards[0].offsetWidth + 30; // card width + gap
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+}
+
+nextBtn.addEventListener('click', () => {
+    if (currentIndex < cards.length - visibleCards) {
+        currentIndex++;
+        updateSlider();
+    }
+});
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+    }
+});
+
+window.addEventListener('resize', updateSlider);
+updateSlider();
+</script>
+
+</body>
+</html>
