@@ -116,26 +116,56 @@
 
 <!-- JAVASCRIPT -->
 <script>
+/* =========================
+   PROJECT SLIDER
+========================= */
 const track = document.querySelector('.project-track');
 const cards = document.querySelectorAll('.project-card');
 const nextBtn = document.querySelector('.right');
 const prevBtn = document.querySelector('.left');
 
 let currentIndex = 0;
-const visibleCards = 2;
 
-function updateSlider() {
-    const cardWidth = cards[0].offsetWidth + 30; // card width + gap
-    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+/* Number of visible cards based on screen size */
+function getVisibleCards() {
+    return window.innerWidth <= 992 ? 1 : 2;
 }
 
+/* Update slider position */
+function updateSlider() {
+    const visibleCards = getVisibleCards();
+    const gap = 30; // Must match CSS gap value
+    const cardWidth = cards[0].offsetWidth + gap;
+    const maxIndex = Math.max(0, cards.length - visibleCards);
+
+    /* Prevent index from exceeding limits after resize */
+    if (currentIndex > maxIndex) {
+        currentIndex = maxIndex;
+    }
+
+    /* Move the slider */
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+    /* Disable arrows at beginning and end */
+    prevBtn.style.opacity = currentIndex === 0 ? "0.4" : "1";
+    prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
+
+    nextBtn.style.opacity = currentIndex === maxIndex ? "0.4" : "1";
+    nextBtn.style.pointerEvents = currentIndex === maxIndex ? "none" : "auto";
+}
+
+/* Next slide */
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < cards.length - visibleCards) {
+    const visibleCards = getVisibleCards();
+    const maxIndex = Math.max(0, cards.length - visibleCards);
+
+    if (currentIndex < maxIndex) {
         currentIndex++;
         updateSlider();
     }
 });
 
+/* Previous slide */
 prevBtn.addEventListener('click', () => {
     if (currentIndex > 0) {
         currentIndex--;
@@ -143,7 +173,35 @@ prevBtn.addEventListener('click', () => {
     }
 });
 
+/* =========================
+   SCROLL ANIMATION
+========================= */
+const projectsSection = document.querySelector('.projects');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            /* Add animation class when section enters viewport */
+            projectsSection.classList.add('show');
+
+            /* Recalculate slider after animation begins */
+            setTimeout(updateSlider, 300);
+
+            /* Run animation only once */
+            observer.unobserve(projectsSection);
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+/* Start observing the Projects section */
+observer.observe(projectsSection);
+
+/* Resize handler */
 window.addEventListener('resize', updateSlider);
+
+/* Initial slider setup */
 updateSlider();
 </script>
 
