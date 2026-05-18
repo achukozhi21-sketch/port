@@ -247,35 +247,20 @@ body {
 }
 
 /* ==========================================
-   FEATURED PROJECTS - MASONRY STYLE
-   (Matches .creative-showcase HTML)
+   CREATIVE SHOWCASE SECTION
+   Background matches Selected Works section
 ========================================== */
 .creative-showcase {
-    padding: 140px 10%;
-    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    padding: 120px 10%;
+    background: linear-gradient(135deg, #fafafa, #f3f4f6, #e5e7eb);
 }
 
+/* Header (hidden since HTML contains no text) */
 .creative-showcase-header {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 80px;
+    display: none;
 }
 
-.creative-showcase-header h2 {
-    font-size: 44px;
-    font-weight: 700;
-    color: #111827;
-    margin-bottom: 18px;
-    letter-spacing: -1px;
-}
-
-.creative-showcase-header p {
-    font-size: 18px;
-    color: #64748b;
-    line-height: 1.9;
-}
-
-/* Masonry Grid */
+/* Creative Grid */
 .creative-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -283,14 +268,14 @@ body {
     gap: 30px;
 }
 
-/* Cards */
+/* Creative Cards */
 .creative-card {
     position: relative;
     overflow: hidden;
     border-radius: 28px;
+    background: #111827;
     box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
     transition: all 0.5s ease;
-    background: #111827;
 }
 
 .creative-card:hover {
@@ -338,7 +323,7 @@ body {
     color: #ffffff;
     background: linear-gradient(
         to top,
-        rgba(15, 23, 42, 0.9) 0%,
+        rgba(15, 23, 42, 0.92) 0%,
         rgba(15, 23, 42, 0.45) 45%,
         rgba(15, 23, 42, 0.05) 100%
     );
@@ -419,12 +404,11 @@ footer {
         padding: 0 60px;
     }
 
-    .projects-header h2,
-    .creative-showcase-header h2 {
+    .projects-header h2 {
         font-size: 36px;
     }
 
-    /* Creative Grid Tablet */
+    /* Creative Grid */
     .creative-grid {
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
@@ -474,8 +458,7 @@ footer {
         padding: 0 8%;
     }
 
-    .projects-header h2,
-    .creative-showcase-header h2 {
+    .projects-header h2 {
         font-size: 32px;
     }
 
@@ -519,17 +502,9 @@ footer {
         right: 8px;
     }
 
-    /* Featured Projects */
+    /* Creative Showcase */
     .creative-showcase {
         padding: 90px 8%;
-    }
-
-    .creative-showcase-header {
-        margin-bottom: 60px;
-    }
-
-    .creative-showcase-header p {
-        font-size: 16px;
     }
 
     .creative-grid {
