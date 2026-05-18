@@ -244,6 +244,14 @@ left: 15px;
 .arrow.right {
 right: 15px;
 }
+/* ==========================================
+   VERTICAL PROJECT SHOWCASE SECTION
+   PLACE THIS SECTION AFTER:
+   .arrow.right { right: 15px; }
+   AND BEFORE:
+   @media (max-width: 992px)
+========================================== */
+
 .projects-vertical {
     padding: 120px 10%;
     background: linear-gradient(135deg, #fafafa, #f3f4f6, #e5e7eb);
@@ -373,7 +381,7 @@ right: 15px;
 }
 
 /* ==========================================
-   ADD THESE RULES INSIDE THE EXISTING
+   ADD THESE RULES INSIDE YOUR EXISTING
    @media (max-width: 992px) BLOCK
 ========================================== */
 
@@ -410,7 +418,7 @@ right: 15px;
 */
 
 /* ==========================================
-   ADD THESE RULES INSIDE THE EXISTING
+   ADD THESE RULES INSIDE YOUR EXISTING
    @media (max-width: 768px) BLOCK
 ========================================== */
 
