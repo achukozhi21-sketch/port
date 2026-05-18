@@ -247,22 +247,21 @@ body {
 }
 
 /* ==========================================
-   FEATURED PROJECTS TIMELINE STYLE
+   FEATURED PROJECTS - MASONRY STYLE
+   (Matches .creative-showcase HTML)
 ========================================== */
-.project-showcase {
+.creative-showcase {
     padding: 140px 10%;
     background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-    position: relative;
 }
 
-/* Showcase Header */
-.project-showcase-header {
+.creative-showcase-header {
     text-align: center;
     max-width: 760px;
-    margin: 0 auto 90px;
+    margin: 0 auto 80px;
 }
 
-.project-showcase-header h2 {
+.creative-showcase-header h2 {
     font-size: 44px;
     font-weight: 700;
     color: #111827;
@@ -270,145 +269,114 @@ body {
     letter-spacing: -1px;
 }
 
-.project-showcase-header p {
+.creative-showcase-header p {
     font-size: 18px;
     color: #64748b;
     line-height: 1.9;
 }
 
-/* Timeline Grid */
-.showcase-grid {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    max-width: 1100px;
-    margin: 0 auto;
+/* Masonry Grid */
+.creative-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 80px;
+    gap: 30px;
 }
 
-/* Vertical Line */
-.showcase-grid::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        #e2e8f0 10%,
-        #e2e8f0 90%,
-        transparent
-    );
-    transform: translateX(-50%);
-}
-
-/* Showcase Card */
-.showcase-card {
+/* Cards */
+.creative-card {
     position: relative;
-    width: calc(50% - 50px);
-    background: #ffffff;
-    border-radius: 28px;
     overflow: hidden;
-    border: 1px solid #e5e7eb;
+    border-radius: 28px;
     box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
+    background: #111827;
 }
 
-.showcase-card:nth-child(odd) {
-    align-self: flex-start;
-}
-
-.showcase-card:nth-child(even) {
-    align-self: flex-end;
-}
-
-/* Timeline Dot */
-.showcase-card::before {
-    content: "";
-    position: absolute;
-    top: 40px;
-    width: 18px;
-    height: 18px;
-    background: #e63e4c;
-    border: 4px solid #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 6px rgba(230, 62, 76, 0.12);
-    z-index: 2;
-}
-
-.showcase-card:nth-child(odd)::before {
-    right: -59px;
-}
-
-.showcase-card:nth-child(even)::before {
-    left: -59px;
-}
-
-.showcase-card:hover {
+.creative-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 35px 90px rgba(15, 23, 42, 0.14);
+    box-shadow: 0 35px 90px rgba(15, 23, 42, 0.15);
 }
 
-/* Showcase Image */
-.showcase-card img {
+/* Card Sizes */
+.creative-card.large {
+    grid-column: span 7;
+    grid-row: span 6;
+}
+
+.creative-card.wide {
+    grid-column: span 7;
+    grid-row: span 5;
+}
+
+.creative-card:not(.large):not(.wide) {
+    grid-column: span 5;
+    grid-row: span 3;
+}
+
+/* Images */
+.creative-card img {
     width: 100%;
-    height: 320px;
+    height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.6s ease;
 }
 
-/* Showcase Content */
-.showcase-content {
+.creative-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Overlay */
+.creative-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     padding: 35px;
+    color: #ffffff;
+    background: linear-gradient(
+        to top,
+        rgba(15, 23, 42, 0.9) 0%,
+        rgba(15, 23, 42, 0.45) 45%,
+        rgba(15, 23, 42, 0.05) 100%
+    );
 }
 
-.showcase-category {
+/* Label */
+.creative-label {
     display: inline-block;
+    align-self: flex-start;
     padding: 7px 16px;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #e63e4c;
-    background: rgba(230, 62, 76, 0.08);
+    color: #ffffff;
+    background: rgba(230, 62, 76, 0.9);
     border-radius: 999px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
-.showcase-content h3 {
+/* Text */
+.creative-overlay h3 {
     font-size: 30px;
     font-weight: 600;
-    color: #111827;
     line-height: 1.3;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-.showcase-content p {
-    font-size: 16px;
-    color: #64748b;
-    line-height: 1.9;
-    margin-bottom: 25px;
+.creative-overlay p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 520px;
 }
 
-/* Showcase Tags */
-.showcase-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.showcase-tags span {
-    padding: 8px 14px;
-    font-size: 13px;
-    color: #475569;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 999px;
-}
-
-/* CONTACT */
+/* ==========================================
+   CONTACT
+========================================== */
 .contact {
     padding: 80px 10%;
     text-align: center;
@@ -435,7 +403,9 @@ footer {
     color: white;
 }
 
-/* TABLET */
+/* ==========================================
+   TABLET
+========================================== */
 @media (max-width: 992px) {
     .project-card {
         flex: 0 0 100%;
@@ -450,41 +420,52 @@ footer {
     }
 
     .projects-header h2,
-    .project-showcase-header h2 {
+    .creative-showcase-header h2 {
         font-size: 36px;
     }
 
-    .showcase-grid::before {
-        left: 24px;
-        transform: none;
+    /* Creative Grid Tablet */
+    .creative-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
     }
 
-    .showcase-card {
-        width: calc(100% - 60px);
-        align-self: flex-end !important;
+    .creative-card,
+    .creative-card.large,
+    .creative-card.wide,
+    .creative-card:not(.large):not(.wide) {
+        grid-column: span 1;
+        grid-row: span 1;
     }
 
-    .showcase-card::before {
-        left: -45px !important;
-        right: auto !important;
-        top: 35px;
+    .creative-card {
+        min-height: 420px;
     }
 
-    .showcase-card img {
-        height: 280px;
-    }
-
-    .showcase-content h3 {
+    .creative-overlay h3 {
         font-size: 26px;
     }
 }
 
-/* MOBILE */
+/* ==========================================
+   MOBILE
+========================================== */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 40px;
     }
 
+    .about,
+    .contact {
+        padding: 80px 8%;
+    }
+
+    .about h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    /* Selected Works */
     .projects {
         padding: 80px 0;
     }
@@ -494,7 +475,7 @@ footer {
     }
 
     .projects-header h2,
-    .project-showcase-header h2 {
+    .creative-showcase-header h2 {
         font-size: 32px;
     }
 
@@ -519,8 +500,7 @@ footer {
         font-size: 22px;
     }
 
-    .tags span,
-    .showcase-tags span {
+    .tags span {
         font-size: 12px;
         padding: 6px 12px;
     }
@@ -539,51 +519,43 @@ footer {
         right: 8px;
     }
 
-    .project-showcase {
+    /* Featured Projects */
+    .creative-showcase {
         padding: 90px 8%;
     }
 
-    .project-showcase-header {
+    .creative-showcase-header {
         margin-bottom: 60px;
     }
 
-    .project-showcase-header p {
+    .creative-showcase-header p {
         font-size: 16px;
     }
 
-    .showcase-grid {
-        gap: 50px;
+    .creative-grid {
+        gap: 24px;
     }
 
-    .showcase-grid::before {
-        left: 18px;
-    }
-
-    .showcase-card {
-        width: calc(100% - 45px);
+    .creative-card {
+        min-height: 320px;
         border-radius: 22px;
     }
 
-    .showcase-card::before {
-        left: -33px !important;
-        width: 14px;
-        height: 14px;
-        border-width: 3px;
-    }
-
-    .showcase-card img {
-        height: 220px;
-    }
-
-    .showcase-content {
+    .creative-overlay {
         padding: 24px;
     }
 
-    .showcase-content h3 {
+    .creative-label {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    .creative-overlay h3 {
         font-size: 22px;
     }
 
-    .showcase-content p {
-        font-size: 15px;
+    .creative-overlay p {
+        font-size: 14px;
+        line-height: 1.7;
     }
 }
