@@ -89,13 +89,12 @@ body {
     background: linear-gradient(135deg, #fafafa, #f3f4f6, #e5e7eb);
     overflow: hidden;
 
-    /* Scroll animation initial state */
+    /* Scroll Animation */
     opacity: 0;
     transform: translateY(80px);
     transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Active state when section enters viewport */
 .projects.show {
     opacity: 1;
     transform: translateY(0);
@@ -211,7 +210,7 @@ body {
     border-radius: 999px;
 }
 
-/* Slider Arrows */
+/* Arrows */
 .arrow {
     position: absolute;
     top: 50%;
@@ -248,42 +247,67 @@ body {
 }
 
 /* ==========================================
-   FEATURED PROJECTS SHOWCASE SECTION
+   FEATURED PROJECTS TIMELINE STYLE
 ========================================== */
 .project-showcase {
-    padding: 120px 10%;
-    background: #ffffff;
+    padding: 140px 10%;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    position: relative;
 }
 
+/* Showcase Header */
 .project-showcase-header {
     text-align: center;
-    margin-bottom: 70px;
+    max-width: 760px;
+    margin: 0 auto 90px;
 }
 
 .project-showcase-header h2 {
-    font-size: 42px;
+    font-size: 44px;
     font-weight: 700;
     color: #111827;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
 }
 
 .project-showcase-header p {
     font-size: 18px;
     color: #64748b;
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
-/* Showcase Grid */
+/* Timeline Grid */
 .showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Vertical Line */
+.showcase-grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        #e2e8f0 10%,
+        #e2e8f0 90%,
+        transparent
+    );
+    transform: translateX(-50%);
 }
 
 /* Showcase Card */
 .showcase-card {
+    position: relative;
+    width: calc(50% - 50px);
     background: #ffffff;
     border-radius: 28px;
     overflow: hidden;
@@ -292,15 +316,45 @@ body {
     transition: all 0.4s ease;
 }
 
+.showcase-card:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.showcase-card:nth-child(even) {
+    align-self: flex-end;
+}
+
+/* Timeline Dot */
+.showcase-card::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 18px;
+    height: 18px;
+    background: #e63e4c;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(230, 62, 76, 0.12);
+    z-index: 2;
+}
+
+.showcase-card:nth-child(odd)::before {
+    right: -59px;
+}
+
+.showcase-card:nth-child(even)::before {
+    left: -59px;
+}
+
 .showcase-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 35px 90px rgba(15, 23, 42, 0.14);
 }
 
 /* Showcase Image */
 .showcase-card img {
     width: 100%;
-    height: 360px;
+    height: 320px;
     object-fit: cover;
     display: block;
 }
@@ -312,29 +366,29 @@ body {
 
 .showcase-category {
     display: inline-block;
-    padding: 6px 14px;
-    font-size: 12px;
-    font-weight: 600;
+    padding: 7px 16px;
+    font-size: 11px;
+    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #e63e4c;
     background: rgba(230, 62, 76, 0.08);
     border-radius: 999px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .showcase-content h3 {
     font-size: 30px;
     font-weight: 600;
     color: #111827;
-    margin-bottom: 15px;
     line-height: 1.3;
+    margin-bottom: 15px;
 }
 
 .showcase-content p {
     font-size: 16px;
     color: #64748b;
-    line-height: 1.8;
+    line-height: 1.9;
     margin-bottom: 25px;
 }
 
@@ -381,9 +435,7 @@ footer {
     color: white;
 }
 
-/* ==========================================
-   TABLET RESPONSIVE
-========================================== */
+/* TABLET */
 @media (max-width: 992px) {
     .project-card {
         flex: 0 0 100%;
@@ -402,17 +454,24 @@ footer {
         font-size: 36px;
     }
 
-    .showcase-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    .showcase-grid::before {
+        left: 24px;
+        transform: none;
+    }
+
+    .showcase-card {
+        width: calc(100% - 60px);
+        align-self: flex-end !important;
+    }
+
+    .showcase-card::before {
+        left: -45px !important;
+        right: auto !important;
+        top: 35px;
     }
 
     .showcase-card img {
-        height: 300px;
-    }
-
-    .showcase-content {
-        padding: 28px;
+        height: 280px;
     }
 
     .showcase-content h3 {
@@ -420,9 +479,7 @@ footer {
     }
 }
 
-/* ==========================================
-   MOBILE RESPONSIVE
-========================================== */
+/* MOBILE */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 40px;
@@ -483,15 +540,35 @@ footer {
     }
 
     .project-showcase {
-        padding: 80px 8%;
+        padding: 90px 8%;
+    }
+
+    .project-showcase-header {
+        margin-bottom: 60px;
     }
 
     .project-showcase-header p {
         font-size: 16px;
     }
 
+    .showcase-grid {
+        gap: 50px;
+    }
+
+    .showcase-grid::before {
+        left: 18px;
+    }
+
     .showcase-card {
-        border-radius: 20px;
+        width: calc(100% - 45px);
+        border-radius: 22px;
+    }
+
+    .showcase-card::before {
+        left: -33px !important;
+        width: 14px;
+        height: 14px;
+        border-width: 3px;
     }
 
     .showcase-card img {
@@ -499,7 +576,7 @@ footer {
     }
 
     .showcase-content {
-        padding: 22px;
+        padding: 24px;
     }
 
     .showcase-content h3 {
