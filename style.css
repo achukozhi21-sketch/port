@@ -81,13 +81,15 @@ body {
     line-height: 1.8;
 }
 
-/* PROJECTS SECTION - LIGHT THEME WITH SCROLL ANIMATION */
+/* ==========================================
+   SELECTED WORKS SLIDER SECTION
+========================================== */
 .projects {
     padding: 100px 0;
     background: linear-gradient(135deg, #fafafa, #f3f4f6, #e5e7eb);
     overflow: hidden;
 
-    /* Animation initial state */
+    /* Scroll animation initial state */
     opacity: 0;
     transform: translateY(80px);
     transition: opacity 1s ease, transform 1s ease;
@@ -130,7 +132,7 @@ body {
     transform: translateY(0);
 }
 
-/* PROJECTS HEADER */
+/* Projects Header */
 .projects-header h2 {
     font-size: 42px;
     color: #111827;
@@ -143,20 +145,20 @@ body {
     font-size: 16px;
 }
 
-/* SLIDER WRAPPER */
+/* Slider Wrapper */
 .slider-container {
     overflow: hidden;
     padding: 0 80px;
 }
 
-/* TRACK */
+/* Slider Track */
 .project-track {
     display: flex;
     gap: 30px;
     transition: transform 0.6s ease;
 }
 
-/* PROJECT CARD */
+/* Project Card */
 .project-card {
     flex: 0 0 calc(50% - 15px);
     background: #ffffff;
@@ -172,7 +174,7 @@ body {
     box-shadow: 0 25px 60px rgba(15, 23, 42, 0.12);
 }
 
-/* PROJECT IMAGE */
+/* Project Image */
 .project-card img {
     width: 100%;
     height: 420px;
@@ -180,7 +182,7 @@ body {
     display: block;
 }
 
-/* PROJECT INFO */
+/* Project Info */
 .project-info {
     padding: 24px;
 }
@@ -193,7 +195,7 @@ body {
     line-height: 1.3;
 }
 
-/* TAGS */
+/* Tags */
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -209,7 +211,7 @@ body {
     border-radius: 999px;
 }
 
-/* ARROWS */
+/* Slider Arrows */
 .arrow {
     position: absolute;
     top: 50%;
@@ -245,7 +247,143 @@ body {
     right: 15px;
 }
 
-/* TABLET */
+/* ==========================================
+   FEATURED PROJECTS SHOWCASE SECTION
+========================================== */
+.project-showcase {
+    padding: 120px 10%;
+    background: #ffffff;
+}
+
+.project-showcase-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.project-showcase-header h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.project-showcase-header p {
+    font-size: 18px;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Showcase Grid */
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+/* Showcase Card */
+.showcase-card {
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+    transition: all 0.4s ease;
+}
+
+.showcase-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(15, 23, 42, 0.12);
+}
+
+/* Showcase Image */
+.showcase-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Showcase Content */
+.showcase-content {
+    padding: 35px;
+}
+
+.showcase-category {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #e63e4c;
+    background: rgba(230, 62, 76, 0.08);
+    border-radius: 999px;
+    margin-bottom: 18px;
+}
+
+.showcase-content h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.showcase-content p {
+    font-size: 16px;
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Showcase Tags */
+.showcase-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.showcase-tags span {
+    padding: 8px 14px;
+    font-size: 13px;
+    color: #475569;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+}
+
+/* CONTACT */
+.contact {
+    padding: 80px 10%;
+    text-align: center;
+    background: #f8fafc;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.contact p {
+    color: #64748b;
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111;
+    color: white;
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
 @media (max-width: 992px) {
     .project-card {
         flex: 0 0 100%;
@@ -259,14 +397,37 @@ body {
         padding: 0 60px;
     }
 
-    .projects-header h2 {
+    .projects-header h2,
+    .project-showcase-header h2 {
         font-size: 36px;
+    }
+
+    .showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .showcase-card img {
+        height: 300px;
+    }
+
+    .showcase-content {
+        padding: 28px;
+    }
+
+    .showcase-content h3 {
+        font-size: 26px;
     }
 }
 
-
-/* MOBILE */
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+
     .projects {
         padding: 80px 0;
     }
@@ -275,7 +436,8 @@ body {
         padding: 0 8%;
     }
 
-    .projects-header h2 {
+    .projects-header h2,
+    .project-showcase-header h2 {
         font-size: 32px;
     }
 
@@ -300,7 +462,8 @@ body {
         font-size: 22px;
     }
 
-    .tags span {
+    .tags span,
+    .showcase-tags span {
         font-size: 12px;
         padding: 6px 12px;
     }
@@ -318,29 +481,32 @@ body {
     .arrow.right {
         right: 8px;
     }
-}
-/* CONTACT */
-.contact {
-padding: 80px 10%;
-text-align: center;
-background: #f8fafc;
-}
 
-.contact h2 {
-margin-bottom: 20px;
-}
+    .project-showcase {
+        padding: 80px 8%;
+    }
 
-/* FOOTER */
-footer {
-text-align: center;
-padding: 20px;
-background: #111;
-color: white;
-}
+    .project-showcase-header p {
+        font-size: 16px;
+    }
 
-/* RESPONSIVE */
-@media(max-width: 768px) {
-.hero h1 {
-font-size: 40px;
-}
+    .showcase-card {
+        border-radius: 20px;
+    }
+
+    .showcase-card img {
+        height: 220px;
+    }
+
+    .showcase-content {
+        padding: 22px;
+    }
+
+    .showcase-content h3 {
+        font-size: 22px;
+    }
+
+    .showcase-content p {
+        font-size: 15px;
+    }
 }
