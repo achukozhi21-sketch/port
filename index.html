@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Akshaya Santhosh | Creative Portfolio</title>
-<link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akshaya Santhosh | Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -38,61 +38,117 @@
         <!-- Left Arrow -->
         <button class="arrow left" aria-label="Previous Project">&#10094;</button>
 
-        <!-- Slider Track -->
+        <!-- Slider Container -->
         <div class="slider-container">
             <div class="project-track">
 
                 <!-- Project 1 -->
-                <div class="project-card">
+                <article class="project-card featured">
                     <img src="images/project1.jpg" alt="Brand Identity System" />
                     <div class="project-info">
                         <h3>Brand Identity System</h3>
+                        <p>
+                            Complete branding solutions including logo design,
+                            typography, and visual guidelines for modern businesses.
+                        </p>
                         <div class="tags">
                             <span>Brand Strategy</span>
                             <span>Logo Design</span>
-                            <span>Brand Identity</span>
+                            <span>Identity</span>
                         </div>
+                        <a href="#" class="project-btn">View Project</a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Project 2 -->
-                <div class="project-card">
+                <article class="project-card">
                     <img src="images/project2.jpg" alt="Packaging Design" />
                     <div class="project-info">
                         <h3>Packaging Design</h3>
+                        <p>
+                            Creative packaging concepts designed to elevate
+                            product presentation and customer appeal.
+                        </p>
                         <div class="tags">
                             <span>Packaging</span>
                             <span>Photoshop</span>
                             <span>Mockup</span>
                         </div>
+                        <a href="#" class="project-btn">View Project</a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Project 3 -->
-                <div class="project-card">
+                <article class="project-card">
                     <img src="images/project3.jpg" alt="Motion Graphics" />
                     <div class="project-info">
                         <h3>Motion Graphics</h3>
+                        <p>
+                            Dynamic animations and visual effects created
+                            for promotional videos and digital campaigns.
+                        </p>
                         <div class="tags">
                             <span>After Effects</span>
                             <span>Animation</span>
                             <span>Video Editing</span>
                         </div>
+                        <a href="#" class="project-btn">View Project</a>
                     </div>
-                </div>
+                </article>
 
                 <!-- Project 4 -->
-                <div class="project-card">
+                <article class="project-card">
                     <img src="images/project4.jpg" alt="YouTube Thumbnails" />
                     <div class="project-info">
                         <h3>YouTube Thumbnails</h3>
+                        <p>
+                            High-converting thumbnail designs optimized
+                            for visibility, engagement, and brand consistency.
+                        </p>
                         <div class="tags">
                             <span>Thumbnail Design</span>
                             <span>Photoshop</span>
                             <span>Branding</span>
                         </div>
+                        <a href="#" class="project-btn">View Project</a>
                     </div>
-                </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card">
+                    <img src="images/project5.jpg" alt="Animated Explainer Videos" />
+                    <div class="project-info">
+                        <h3>Animated Explainer Videos</h3>
+                        <p>
+                            Engaging animated videos developed for educational
+                            and marketing purposes.
+                        </p>
+                        <div class="tags">
+                            <span>Adobe Animate</span>
+                            <span>Storyboarding</span>
+                            <span>Animation</span>
+                        </div>
+                        <a href="#" class="project-btn">View Project</a>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card">
+                    <img src="images/project6.jpg" alt="Presentation Design" />
+                    <div class="project-info">
+                        <h3>Presentation Design</h3>
+                        <p>
+                            Professional presentations crafted to communicate
+                            ideas clearly and effectively.
+                        </p>
+                        <div class="tags">
+                            <span>PowerPoint</span>
+                            <span>Visual Design</span>
+                            <span>Infographics</span>
+                        </div>
+                        <a href="#" class="project-btn">View Project</a>
+                    </div>
+                </article>
 
             </div>
         </div>
@@ -116,9 +172,6 @@
 
 <!-- JAVASCRIPT -->
 <script>
-/* =========================
-   PROJECT SLIDER
-========================= */
 const track = document.querySelector('.project-track');
 const cards = document.querySelectorAll('.project-card');
 const nextBtn = document.querySelector('.right');
@@ -127,30 +180,24 @@ const projectsSection = document.querySelector('.projects');
 
 let currentIndex = 0;
 
-/* Number of visible cards based on screen size */
 function getVisibleCards() {
     return window.innerWidth <= 992 ? 1 : 2;
 }
 
-/* Update slider position */
 function updateSlider() {
-    /* Ensure all required elements exist */
     if (!track || !cards.length || !nextBtn || !prevBtn) return;
 
     const visibleCards = getVisibleCards();
-    const gap = 30; /* Must match CSS gap value */
+    const gap = 30;
     const cardWidth = cards[0].offsetWidth + gap;
     const maxIndex = Math.max(0, cards.length - visibleCards);
 
-    /* Prevent index from exceeding limits after resize */
     if (currentIndex > maxIndex) {
         currentIndex = maxIndex;
     }
 
-    /* Move the slider */
     track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 
-    /* Disable arrows at beginning and end */
     prevBtn.style.opacity = currentIndex === 0 ? "0.4" : "1";
     prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
 
@@ -158,61 +205,37 @@ function updateSlider() {
     nextBtn.style.pointerEvents = currentIndex === maxIndex ? "none" : "auto";
 }
 
-/* Next slide */
-if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-        const visibleCards = getVisibleCards();
-        const maxIndex = Math.max(0, cards.length - visibleCards);
+nextBtn.addEventListener('click', () => {
+    const maxIndex = Math.max(0, cards.length - getVisibleCards());
+    if (currentIndex < maxIndex) {
+        currentIndex++;
+        updateSlider();
+    }
+});
 
-        if (currentIndex < maxIndex) {
-            currentIndex++;
-            updateSlider();
-        }
-    });
-}
+prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+    }
+});
 
-/* Previous slide */
-if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider();
-        }
-    });
-}
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
 if (projectsSection) {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                /* Add animation class when section enters viewport */
                 projectsSection.classList.add('show');
-
-                /* Recalculate slider after animation begins */
                 setTimeout(updateSlider, 300);
-
-                /* Run animation only once */
                 observer.unobserve(projectsSection);
             }
         });
-    }, {
-        threshold: 0.2
-    });
+    }, { threshold: 0.2 });
 
-    /* Start observing the Projects section */
     observer.observe(projectsSection);
 }
 
-/* Resize handler */
 window.addEventListener('resize', updateSlider);
-
-/* Wait until all images are loaded */
 window.addEventListener('load', updateSlider);
-
-/* Initial slider setup */
 updateSlider();
 </script>
 
