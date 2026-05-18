@@ -26,11 +26,11 @@
     </p>
 </section>
 
-<!-- SELECTED WORKS SLIDER SECTION -->
+<!-- PROJECTS SECTION -->
 <section id="projects" class="projects">
     <div class="projects-header">
         <h2>Selected Works</h2>
-        <p>Photoshop • Illustrator • After Effects • Premiere Pro</p>
+        <p>Creative projects in branding, design, and motion graphics</p>
     </div>
 
     <div class="projects-slider">
@@ -38,13 +38,13 @@
         <!-- Left Arrow -->
         <button class="arrow left">&#10094;</button>
 
-        <!-- Slider Container -->
+        <!-- Slider Track -->
         <div class="slider-container">
             <div class="project-track">
 
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <img src="images/project1.jpg" alt="Brand Identity System">
+                    <img src="images/project1.jpg" alt="Brand Identity System" />
                     <div class="project-info">
                         <h3>Brand Identity System</h3>
                         <div class="tags">
@@ -57,7 +57,7 @@
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <img src="images/project2.jpg" alt="Packaging Design">
+                    <img src="images/project2.jpg" alt="Packaging Design" />
                     <div class="project-info">
                         <h3>Packaging Design</h3>
                         <div class="tags">
@@ -70,7 +70,7 @@
 
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <img src="images/project3.jpg" alt="Motion Graphics">
+                    <img src="images/project3.jpg" alt="Motion Graphics" />
                     <div class="project-info">
                         <h3>Motion Graphics</h3>
                         <div class="tags">
@@ -83,7 +83,7 @@
 
                 <!-- Project 4 -->
                 <div class="project-card">
-                    <img src="images/project4.jpg" alt="YouTube Thumbnails">
+                    <img src="images/project4.jpg" alt="YouTube Thumbnails" />
                     <div class="project-info">
                         <h3>YouTube Thumbnails</h3>
                         <div class="tags">
@@ -102,53 +102,61 @@
     </div>
 </section>
 
-<!-- PROJECT SHOWCASE SECTION (NEW STYLE BELOW SLIDER) -->
-<section class="project-showcase">
-    <div class="project-showcase-header">
+<!-- CREATIVE SHOWCASE SECTION -->
+<section class="creative-showcase">
+    <div class="creative-showcase-header">
         <h2>Featured Projects</h2>
         <p>
-            A curated collection of branding, motion graphics, and digital design projects
-            crafted to create engaging and memorable visual experiences.
+            A curated collection of creative work highlighting branding,
+            visual storytelling, and motion design.
         </p>
     </div>
 
-    <div class="showcase-grid">
+    <div class="creative-grid">
 
         <!-- Showcase Project 1 -->
-        <div class="showcase-card">
-            <img src="images/showcase1.jpg" alt="Temple Animation Project">
-            <div class="showcase-content">
-                <span class="showcase-category">Animation</span>
-                <h3>Temple Animation</h3>
+        <article class="creative-card large">
+            <img src="images/showcase1.jpg" alt="Luxury Brand Campaign" />
+            <div class="creative-overlay">
+                <span class="creative-label">Branding</span>
+                <h3>Luxury Brand Campaign</h3>
                 <p>
-                    A detailed animated project created to present architectural beauty
-                    and spiritual storytelling through motion graphics.
+                    Complete visual identity and campaign design developed
+                    for a premium lifestyle brand.
                 </p>
-                <div class="showcase-tags">
-                    <span>After Effects</span>
-                    <span>Illustration</span>
-                    <span>Motion Design</span>
-                </div>
             </div>
-        </div>
+        </article>
 
         <!-- Showcase Project 2 -->
-        <div class="showcase-card">
-            <img src="images/showcase2.jpg" alt="Cyber Security Classroom Animation">
-            <div class="showcase-content">
-                <span class="showcase-category">Educational Video</span>
-                <h3>Cyber Security Animation</h3>
-                <p>
-                    An engaging educational animation explaining hacking scenarios
-                    in a classroom environment with visual storytelling.
-                </p>
-                <div class="showcase-tags">
-                    <span>Premiere Pro</span>
-                    <span>Animation</span>
-                    <span>Video Editing</span>
-                </div>
+        <article class="creative-card">
+            <img src="images/showcase2.jpg" alt="Product Packaging" />
+            <div class="creative-overlay">
+                <span class="creative-label">Packaging</span>
+                <h3>Product Packaging</h3>
             </div>
-        </div>
+        </article>
+
+        <!-- Showcase Project 3 -->
+        <article class="creative-card">
+            <img src="images/showcase3.jpg" alt="Motion Graphics Reel" />
+            <div class="creative-overlay">
+                <span class="creative-label">Motion Design</span>
+                <h3>Motion Graphics Reel</h3>
+            </div>
+        </article>
+
+        <!-- Showcase Project 4 -->
+        <article class="creative-card wide">
+            <img src="images/showcase4.jpg" alt="Digital Storytelling" />
+            <div class="creative-overlay">
+                <span class="creative-label">Visual Storytelling</span>
+                <h3>Digital Storytelling Experience</h3>
+                <p>
+                    Immersive visual content crafted to engage audiences
+                    across digital platforms.
+                </p>
+            </div>
+        </article>
 
     </div>
 </section>
@@ -185,16 +193,19 @@ function getVisibleCards() {
 /* Update slider position */
 function updateSlider() {
     const visibleCards = getVisibleCards();
-    const gap = 30;
+    const gap = 30; // Must match CSS gap value
     const cardWidth = cards[0].offsetWidth + gap;
     const maxIndex = Math.max(0, cards.length - visibleCards);
 
+    /* Prevent index from exceeding limits after resize */
     if (currentIndex > maxIndex) {
         currentIndex = maxIndex;
     }
 
+    /* Move the slider */
     track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 
+    /* Disable arrows at beginning and end */
     prevBtn.style.opacity = currentIndex === 0 ? "0.4" : "1";
     prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
 
@@ -222,15 +233,20 @@ prevBtn.addEventListener('click', () => {
 });
 
 /* =========================
-   SCROLL ANIMATION FOR PROJECTS
+   SCROLL ANIMATION
 ========================= */
 const projectsSection = document.querySelector('.projects');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            /* Add animation class when section enters viewport */
             projectsSection.classList.add('show');
+
+            /* Recalculate slider after animation begins */
             setTimeout(updateSlider, 300);
+
+            /* Run animation only once */
             observer.unobserve(projectsSection);
         }
     });
@@ -238,14 +254,12 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.2
 });
 
+/* Start observing the Projects section */
 observer.observe(projectsSection);
 
 /* Resize handler */
 window.addEventListener('resize', updateSlider);
 
-/* Initial setup */
+/* Initial slider setup */
 updateSlider();
 </script>
-
-</body>
-</html>
