@@ -105,11 +105,7 @@
 <!-- CREATIVE SHOWCASE SECTION -->
 <section class="creative-showcase">
     <div class="creative-showcase-header">
-        <h2>Featured Projects</h2>
-        <p>
-            A curated collection of creative work highlighting branding,
-            visual storytelling, and motion design.
-        </p>
+        <!-- Header intentionally left empty -->
     </div>
 
     <div class="creative-grid">
@@ -248,13 +244,8 @@ const projectsSection = document.querySelector('.projects');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            /* Add animation class when section enters viewport */
             projectsSection.classList.add('show');
-
-            /* Recalculate slider after animation begins */
             setTimeout(updateSlider, 300);
-
-            /* Run animation only once */
             observer.unobserve(projectsSection);
         }
     });
@@ -262,7 +253,6 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.2
 });
 
-/* Start observing the Projects section */
 observer.observe(projectsSection);
 
 /* Resize handler */
@@ -271,3 +261,6 @@ window.addEventListener('resize', updateSlider);
 /* Initial slider setup */
 updateSlider();
 </script>
+
+</body>
+</html>
