@@ -318,3 +318,28 @@ body {
         right: 8px;
     }
 }
+/* CONTACT */
+.contact {
+padding: 80px 10%;
+text-align: center;
+background: #f8fafc;
+}
+
+.contact h2 {
+margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+text-align: center;
+padding: 20px;
+background: #111;
+color: white;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+.hero h1 {
+font-size: 40px;
+}
+}
