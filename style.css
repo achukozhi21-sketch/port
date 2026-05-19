@@ -120,6 +120,103 @@ line-height: 1.8;
     margin: 0 auto;
 }
 
+/* Show one project per row in the Featured Project Showcase */
+.showcase-grid.single-column {
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    gap: 50px;
+    margin: 0 auto;
+}
+
+/* Alternate image and content layout for each project */
+.showcase-grid.single-column .showcase-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: stretch;
+}
+
+/* Reverse layout for every even project */
+.showcase-grid.single-column .showcase-card:nth-child(even) {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.showcase-grid.single-column .showcase-card:nth-child(even) img {
+    order: 2;
+}
+
+.showcase-grid.single-column .showcase-card:nth-child(even) .showcase-content {
+    order: 1;
+}
+
+/* Make image fill full height */
+.showcase-grid.single-column .showcase-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+}
+
+/* Center content vertically */
+.showcase-grid.single-column .showcase-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 992px) {
+    .showcase-grid.single-column {
+        gap: 35px;
+    }
+
+    .showcase-grid.single-column .showcase-card,
+    .showcase-grid.single-column .showcase-card:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-grid.single-column .showcase-card:nth-child(even) img,
+    .showcase-grid.single-column .showcase-card:nth-child(even) .showcase-content {
+        order: initial;
+    }
+
+    .showcase-grid.single-column .showcase-card img {
+        min-height: 320px;
+    }
+
+    .showcase-grid.single-column .showcase-content {
+        padding: 35px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .showcase-grid.single-column {
+        gap: 30px;
+    }
+
+    .showcase-grid.single-column .showcase-card {
+        border-radius: 22px;
+    }
+
+    .showcase-grid.single-column .showcase-card img {
+        min-height: 240px;
+    }
+
+    .showcase-grid.single-column .showcase-content {
+        padding: 24px;
+    }
+
+    .showcase-grid.single-column .showcase-content h3 {
+        font-size: 24px;
+    }
+
+    .showcase-grid.single-column .showcase-content p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
 /* Showcase Card */
 .showcase-card {
     background: #ffffff;
