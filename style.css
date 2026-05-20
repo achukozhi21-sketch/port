@@ -617,3 +617,29 @@ color: white;
 font-size: 40px;
 }
 }
+
+/* ==========================================================
+   GLOBAL WHITE BACKGROUND THEME
+   ========================================================== */
+
+body {
+    background: #ffffff !important;
+    color: #111111;
+}
+
+.about,
+.featured-showcase,
+.projects,
+.contact {
+    background: #ffffff !important;
+}
+
+.showcase-grid.single-column .showcase-card,
+.project-card {
+    background: #ffffff;
+}
+
+footer {
+    background: #111111;
+    color: #ffffff;
+}
