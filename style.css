@@ -10,11 +10,11 @@ scroll-behavior: smooth;
 }
 
 body {
-font-family: 'Helvetica Neue', sans-serif;
-background: #ffffff;
-color: #111;
-line-height: 1.6;
-overflow-x: hidden;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* HERO */
@@ -159,9 +159,9 @@ overflow-x: hidden;
 
 /* ABOUT */
 .about {
-padding: 100px 10%;
-text-align: center;
-background: #ffffff;
+    padding: 100px 10%;
+    text-align: center;
+    background: transparent;
 }
 
 .about h2 {
@@ -185,7 +185,7 @@ line-height: 1.8;
 
 .featured-showcase {
     padding: 120px 10%;
-    background: #ffffff;
+    background: transparent;
 }
 
 .showcase-header {
@@ -688,9 +688,9 @@ right: 8px;
 }
 /* CONTACT */
 .contact {
-padding: 80px 10%;
-text-align: center;
-background: #f8fafc;
+    padding: 80px 10%;
+    text-align: center;
+    background: transparent;
 }
 
 .contact h2 {
