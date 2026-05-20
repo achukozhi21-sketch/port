@@ -592,6 +592,219 @@ left: 8px;
 right: 8px;
 }
 }
+
+/* ==========================================================
+   DESIGN TOOLKIT SECTION
+   Add this entire CSS block BEFORE the CONTACT section
+   ========================================================== */
+
+.tools-section {
+    padding: 120px 10%;
+    background: linear-gradient(135deg, #f4f7fa, #e8eef5);
+    border-radius: 40px;
+    margin: 80px auto;
+    max-width: 1400px;
+    box-shadow:
+        0 25px 80px rgba(15, 23, 42, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.tools-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tools-category {
+    margin-bottom: 100px;
+}
+
+.tools-category:last-child {
+    margin-bottom: 0;
+}
+
+.tools-category h2 {
+    text-align: center;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    color: #111827;
+    margin-bottom: 60px;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* TOOL GRID */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 28px;
+}
+
+/* TOOL CARD */
+.tool-card {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 24px;
+    padding: 34px 24px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soft gradient overlay */
+.tool-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right,
+        rgba(59, 130, 246, 0.05),
+        transparent 60%),
+        radial-gradient(circle at bottom left,
+        rgba(16, 185, 129, 0.04),
+        transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tool-card:hover::before {
+    opacity: 1;
+}
+
+.tool-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow:
+        0 20px 50px rgba(15, 23, 42, 0.10),
+        0 8px 20px rgba(15, 23, 42, 0.05);
+    border-color: rgba(59, 130, 246, 0.15);
+}
+
+/* TOOL ICON */
+.tool-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 18px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+    position: relative;
+    z-index: 2;
+}
+
+.tool-icon img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+/* TOOL NAME */
+.tool-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* FADE-UP ANIMATION */
+.tool-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: toolFadeUp 0.8s ease forwards;
+}
+
+.tool-card:nth-child(1) { animation-delay: 0.1s; }
+.tool-card:nth-child(2) { animation-delay: 0.2s; }
+.tool-card:nth-child(3) { animation-delay: 0.3s; }
+.tool-card:nth-child(4) { animation-delay: 0.4s; }
+.tool-card:nth-child(5) { animation-delay: 0.5s; }
+.tool-card:nth-child(6) { animation-delay: 0.6s; }
+.tool-card:nth-child(7) { animation-delay: 0.7s; }
+.tool-card:nth-child(8) { animation-delay: 0.8s; }
+
+@keyframes toolFadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .tools-section {
+        padding: 90px 8%;
+        border-radius: 30px;
+        margin: 60px auto;
+    }
+
+    .tools-category h2 {
+        font-size: 42px;
+        margin-bottom: 45px;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 22px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .tools-section {
+        padding: 70px 6%;
+        border-radius: 24px;
+        margin: 40px auto;
+    }
+
+    .tools-category {
+        margin-bottom: 70px;
+    }
+
+    .tools-category h2 {
+        font-size: 30px;
+        line-height: 1.25;
+        margin-bottom: 35px;
+        letter-spacing: -0.5px;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .tool-card {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+
+    .tool-icon {
+        width: 54px;
+        height: 54px;
+        margin-bottom: 14px;
+        border-radius: 14px;
+    }
+
+    .tool-icon img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .tool-card h3 {
+        font-size: 14px;
+    }
+}
+
 /* CONTACT */
 .contact {
     padding: 80px 10%;
