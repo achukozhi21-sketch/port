@@ -19,45 +19,142 @@ overflow-x: hidden;
 
 /* HERO */
 .hero {
-height: 90vh;
-background: linear-gradient(135deg, #0f2027, #203a43);
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 0 20px;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+
+    /* Premium multi-layer gradient background */
+    background:
+        radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.25), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.22), transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.18), transparent 45%),
+        linear-gradient(135deg, #0f172a 0%, #1e293b 45%, #0f766e 100%);
 }
 
+/* Animated floating glow */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: -20%;
+    background:
+        radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+    animation: heroFloat 18s ease-in-out infinite;
+    z-index: 0;
+}
+
+/* Subtle grid texture */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(circle at center, black 30%, transparent 85%);
+    z-index: 0;
+}
+
+/* Keep content above background effects */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 50px 40px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Floating animation */
+@keyframes heroFloat {
+    0% {
+        transform: translate(-5%, -5%) scale(1);
+    }
+    50% {
+        transform: translate(5%, 5%) scale(1.15);
+    }
+    100% {
+        transform: translate(-5%, -5%) scale(1);
+    }
+}
+
+/* HERO TITLE */
 .hero h1 {
-font-size: 60px;
-font-weight: 700;
-letter-spacing: -1px;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    text-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
+/* HERO SUBTITLE */
 .hero p {
-margin-top: 15px;
-font-size: 18px;
-opacity: 0.85;
+    margin-top: 15px;
+    font-size: 18px;
+    opacity: 0.92;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* BUTTON */
 .btn {
-display: inline-block;
-margin-top: 30px;
-padding: 12px 30px;
-background: rgba(255, 255, 255, 0.15);
-color: white;
-text-decoration: none;
-border: 1px solid rgba(255, 255, 255, 0.25);
-border-radius: 30px;
-backdrop-filter: blur(10px);
-transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #e63e4c, #ff6b6b);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    box-shadow: 0 12px 30px rgba(230, 62, 76, 0.35);
+    transition: all 0.35s ease;
 }
 
 .btn:hover {
-background: #e63e4c;
-border-color: #e63e4c;
-transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(230, 62, 76, 0.45);
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 90vh;
+        padding: 60px 20px;
+    }
+
+    .hero-content {
+        padding: 35px 24px;
+        border-radius: 24px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 14px;
+    }
 }
 
 /* ABOUT */
