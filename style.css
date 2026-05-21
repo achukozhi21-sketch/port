@@ -687,8 +687,8 @@ right: 8px;
 
 /* TOOL ICON */
 .tool-icon {
-    width: 64px;
-    height: 64px;
+    width: 164px;
+    height: 164px;
     margin: 0 auto 18px;
     border-radius: 18px;
     display: flex;
