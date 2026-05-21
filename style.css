@@ -599,7 +599,7 @@ right: 8px;
    ========================================================== */
 
 .tools-section {
-    padding: 120px 10%;
+    padding: 100px 8%;
     background: linear-gradient(135deg, #f4f7fa, #e8eef5);
     border-radius: 40px;
     margin: 80px auto;
@@ -610,7 +610,7 @@ right: 8px;
 }
 
 .tools-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -687,8 +687,8 @@ right: 8px;
 
 /* TOOL ICON */
 .tool-icon {
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     margin: 0 auto 18px;
     border-radius: 18px;
     display: flex;
@@ -702,15 +702,15 @@ right: 8px;
 }
 
 .tool-icon img {
-    width: 140px;
-    height: 140px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
 }
 
 /* TOOL NAME */
 .tool-card h3 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     color: #1f2937;
     margin: 0;
     position: relative;
