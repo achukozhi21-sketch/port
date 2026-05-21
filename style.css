@@ -629,69 +629,81 @@ right: 8px;
 /* TOOL GRID */
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
 }
 
 /* TOOL CARD */
 .tool-card {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 22px;
-    padding: 26px 18px;
-    min-height: 145px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 18px;
+    padding: 18px 14px;
+    min-height: 115px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    transition: all 0.35s ease;
-    position: relative;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     box-shadow:
-        0 10px 30px rgba(15, 23, 42, 0.04);
+        0 6px 18px rgba(15, 23, 42, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
 }
 
+/* TOOL CARD HOVER */
 .tool-card:hover {
     transform: translateY(-6px);
     box-shadow:
-        0 18px 40px rgba(15, 23, 42, 0.08);
-    border-color: rgba(59, 130, 246, 0.15);
+        0 14px 32px rgba(15, 23, 42, 0.08),
+        0 5px 15px rgba(15, 23, 42, 0.04);
 }
 
 /* TOOL ICON */
 .tool-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 18px;
+    width: 52px;
+    height: 52px;
+    margin: 0 auto 10px;
+
+    border-radius: 14px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: #f8fafc;
+    overflow: hidden;
+    background: #ffffff;
 
-    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
 
-    box-shadow:
-        0 6px 16px rgba(15, 23, 42, 0.05);
+    position: relative;
+    z-index: 2;
 }
 
+/* TOOL IMAGE */
 .tool-icon img {
-    width: 42px;
-    height: 42px;
+    width: 34px;
+    height: 34px;
     object-fit: contain;
 }
 
 /* TOOL NAME */
 .tool-card h3 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    color: #111827;
-    text-align: center;
+    color: #1f2937;
+    margin: 0;
+    position: relative;
+    z-index: 2;
 }
-
 /* FADE-UP ANIMATION */
 .tool-card {
     opacity: 0;
