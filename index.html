@@ -371,6 +371,20 @@ window.addEventListener('resize', updateSlider);
 /* Initial slider setup */
 updateSlider();
 </script>
+<script>
+const toolsSection = document.querySelector('.tools-section');
 
+const toolsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            toolsSection.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.25
+});
+
+toolsObserver.observe(toolsSection);
+</script>
 </body>
 </html>
