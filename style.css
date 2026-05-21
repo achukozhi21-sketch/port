@@ -599,7 +599,7 @@ right: 8px;
    ========================================================== */
 
 .tools-section {
-    padding: 100px 8%;
+    padding: 90px 8%;
     background: linear-gradient(135deg, #f4f7fa, #e8eef5);
     border-radius: 40px;
     margin: 80px auto;
@@ -610,7 +610,7 @@ right: 8px;
 }
 
 .tools-container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -624,7 +624,7 @@ right: 8px;
 
 .tools-category h2 {
     text-align: center;
-    font-size: 56px;
+    font-size: 46px;
     font-weight: 700;
     line-height: 1.15;
     letter-spacing: -1.5px;
@@ -702,8 +702,8 @@ right: 8px;
 }
 
 .tool-icon img {
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
