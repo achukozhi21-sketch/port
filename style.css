@@ -686,7 +686,7 @@ right: 8px;
     overflow: hidden;
     background: #ffffff;
 
-    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.9);
 
     position: relative;
     z-index: 2;
