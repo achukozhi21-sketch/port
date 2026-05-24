@@ -597,7 +597,7 @@ right: 8px;
    ========================================================== */
 
 .tools-section {
-    padding: 120px 8%;
+    padding: 80px 8%;
     background: linear-gradient(135deg, #f4f7fa, #e8eef5); 
     border-radius: 40px; 
     margin: 80px auto; 
@@ -608,7 +608,7 @@ right: 8px;
 }
 
 .tools-container {
-    max-width: 1150px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
