@@ -594,17 +594,27 @@ right: 8px;
 
 /* ==========================================================
    DESIGN TOOLKIT SECTION
+   UPDATED TEAL + BLUE PREMIUM THEME
    ========================================================== */
 
 .tools-section {
     padding: 80px 8%;
-    background: linear-gradient(135deg, #f4f7fa, #e8eef5); 
-    border-radius: 40px; 
-    margin: 80px auto; 
-    max-width: 1400px; 
+
+    /* LIGHTENED TEAL + BLUE BACKGROUND */
+    background: linear-gradient(
+        135deg,
+        #dff7f5,
+        #d9eef8,
+        #e8f6ff
+    );
+
+    border-radius: 40px;
+    margin: 80px auto;
+    max-width: 1400px;
+
     box-shadow:
-        0 25px 80px rgba(15, 23, 42, 0.06), 
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        0 25px 80px rgba(15, 23, 42, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .tools-container {
@@ -620,11 +630,15 @@ right: 8px;
     margin-bottom: 0;
 }
 
+/* TITLE */
 .tools-category h2 {
     text-align: center;
     font-size: 30px;
     font-weight: 600;
-    color: #111827;
+
+    /* DARK TEAL TITLE */
+    color: #083344;
+
     margin-bottom: 35px;
     font-family: Georgia, 'Times New Roman', serif;
     letter-spacing: -1px;
@@ -634,16 +648,28 @@ right: 8px;
 .tools-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 10px;
+    gap: 14px;
 }
 
-/* TOOL CARD */
+/* ==========================================================
+   TOOL CARD
+   ========================================================== */
+
 .tool-card {
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(15, 23, 42, 0.06);
-    border-radius: 18px;
-    padding: 14px 10px;
-    min-height: 90px;
+
+    /* LIGHT PREMIUM TEAL-BLUE CARD */
+    background: linear-gradient(
+        135deg,
+        rgba(209, 250, 242, 0.95),
+        rgba(219, 239, 255, 0.95)
+    );
+
+    border: 1px solid rgba(0, 140, 255, 0.10);
+
+    border-radius: 22px;
+
+    padding: 16px 12px;
+    min-height: 95px;
 
     display: flex;
     flex-direction: column;
@@ -651,30 +677,74 @@ right: 8px;
     justify-content: center;
 
     text-align: center;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     box-shadow:
-        0 6px 18px rgba(15, 23, 42, 0.04),
-        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+        0 10px 30px rgba(8, 51, 68, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
 
-    transition: all 0.35s ease;
+    transition: all 0.4s ease;
+
     position: relative;
     overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(35px);
 }
 
-/* TOOL CARD HOVER */
+/* CARD SHINE EFFECT */
+.tool-card::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    border-radius: 50%;
+
+    top: -80px;
+    right: -80px;
+
+    filter: blur(30px);
+
+    transition: 0.5s ease;
+}
+
+/* HOVER */
 .tool-card:hover {
-    transform: translateY(-6px);
+
+    transform: translateY(-8px);
+
+    background: linear-gradient(
+        135deg,
+        rgba(188, 248, 236, 1),
+        rgba(205, 232, 255, 1)
+    );
+
+    border-color: rgba(0, 170, 255, 0.18);
+
     box-shadow:
-        0 14px 32px rgba(15, 23, 42, 0.08),
-        0 5px 15px rgba(15, 23, 42, 0.04);
+        0 18px 40px rgba(0, 140, 255, 0.10),
+        0 10px 24px rgba(0, 255, 180, 0.08);
 }
 
-/* TOOL ICON */
+.tool-card:hover::before {
+    transform: scale(1.2);
+}
+
+/* ==========================================================
+   TOOL ICON
+   ========================================================== */
+
 .tool-icon {
-    width: 42px;
-    height: 42px;
+
+    width: 46px;
+    height: 46px;
+
     margin: 0 auto 10px;
 
     border-radius: 14px;
@@ -684,9 +754,11 @@ right: 8px;
     justify-content: center;
 
     overflow: hidden;
-    background: #ffffff;
 
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 6px 16px rgba(0, 140, 255, 0.08);
 
     position: relative;
     z-index: 2;
@@ -702,26 +774,26 @@ right: 8px;
 /* TOOL NAME */
 .tool-card h3 {
     font-size: 14px;
-    font-weight: 500;
-    color: #1f2937;
+    font-weight: 600;
+
+    color: #0f172a;
+
     margin: 0;
+
     position: relative;
     z-index: 2;
 }
-/* TOOL CARD ANIMATION (Only when section enters viewport) */
-.tool-card {
-    opacity: 0;
-    transform: translateY(35px);
-    transition: all 0.8s ease;
-}
 
-/* Active animation state */
+/* ==========================================================
+   ANIMATION
+   ========================================================== */
+
 .tools-section.show .tool-card {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Stagger effect */
+/* STAGGER EFFECT */
 .tools-section.show .tool-card:nth-child(1) {
     transition-delay: 0.1s;
 }
@@ -754,18 +826,14 @@ right: 8px;
     transition-delay: 0.8s;
 }
 
-@keyframes toolFadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+/* ==========================================================
+   TABLET
+   ========================================================== */
 
-/* TABLET */
 @media (max-width: 992px) {
 
     .tools-category h2 {
-        font-size: 44px;
+        font-size: 42px;
     }
 
     .tools-grid {
@@ -779,7 +847,10 @@ right: 8px;
     }
 }
 
-/* MOBILE */
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
 @media (max-width: 768px) {
 
     .tools-section {
