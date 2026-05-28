@@ -681,6 +681,67 @@ right: 8px;
     box-shadow:
         0 20px 40px rgba(15, 23, 42, 0.10);
 }
+/* TOOL ICON */
+.tool-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.9);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 14px;
+
+    box-shadow:
+        0 6px 18px rgba(15,23,42,0.08);
+}
+
+.tool-icon img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+/* TOOL NAME */
+.tool-card h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .tools-section {
+        padding: 70px 5%;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tool-card {
+        min-height: 115px;
+        padding: 18px 10px;
+    }
+
+    .tool-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .tool-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .tool-card h3 {
+        font-size: 13px;
+    }
+}
 
 /* ==========================================================
    WHAT I BELIEVE SECTION
