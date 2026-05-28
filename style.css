@@ -114,14 +114,6 @@ line-height: 1.8;
     line-height: 1.8;
 }
 
-/* Showcase Grid */
-.showcase-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
 /* Showcase Grid */
 .showcase-grid {
