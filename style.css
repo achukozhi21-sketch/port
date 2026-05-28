@@ -591,13 +591,22 @@ right: 8px;
 
 .tools-section {
     padding: 80px 8%;
-    background: linear-gradient(135deg, #f4f7fa, #e8eef5); 
-    border-radius: 40px; 
-    margin: 80px auto; 
-    max-width: 1400px; 
+
+    background: linear-gradient(
+        135deg,
+        #87cfc3 0%,
+        #97cde3 30%,
+        #8fd9c9 65%,
+        #aadcf1 100%
+    );
+
+    border-radius: 40px;
+    margin: 80px auto;
+    max-width: 1400px;
+
     box-shadow:
-        0 25px 80px rgba(15, 23, 42, 0.06), 
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        0 30px 90px rgba(15, 23, 42, 0.10),
+        inset 0 1px 0 rgba(255,255,255,0.35);
 }
 
 .tools-container {
