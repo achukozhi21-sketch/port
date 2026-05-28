@@ -900,7 +900,14 @@ right: 8px;
    ========================================================== */
 
 .belief-section{
-    background: linear-gradient(135deg, #071018, #0c1d2b, #06141f);
+    background: linear-gradient(
+        135deg,
+        #06141b 0%,
+        #081f2a 30%,
+        #0a2c3a 65%,
+        #0e3a4d 100%
+    );
+
     padding: 110px 8%;
     position: relative;
     overflow: hidden;
