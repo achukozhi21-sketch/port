@@ -601,10 +601,10 @@ right: 8px;
 
     background: linear-gradient(
         135deg,
-        #cfeee8 0%,
-        #d8edf7 35%,
-        #d7f4ec 65%,
-        #e3f7ff 100%
+        #9fd8cf 0%,
+        #a9d6e8 35%,
+        #9fe2d1 65%,
+        #b7e5f7 100%
     );
 
     border-radius: 40px;
@@ -612,8 +612,8 @@ right: 8px;
     max-width: 1400px;
 
     box-shadow:
-        0 25px 80px rgba(15, 23, 42, 0.06),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        0 25px 80px rgba(15, 23, 42, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .tools-container {
     max-width: 1050px;
