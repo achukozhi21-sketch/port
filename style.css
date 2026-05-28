@@ -601,10 +601,10 @@ right: 8px;
 
     background: linear-gradient(
         135deg,
-        #9fd8cf 0%,
-        #a9d6e8 35%,
-        #9fe2d1 65%,
-        #b7e5f7 100%
+        #87cfc3 0%,
+        #97cde3 30%,
+        #8fd9c9 65%,
+        #aadcf1 100%
     );
 
     border-radius: 40px;
@@ -612,9 +612,10 @@ right: 8px;
     max-width: 1400px;
 
     box-shadow:
-        0 25px 80px rgba(15, 23, 42, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        0 30px 90px rgba(15, 23, 42, 0.10),
+        inset 0 1px 0 rgba(255,255,255,0.35);
 }
+
 .tools-container {
     max-width: 1050px;
     margin: 0 auto;
@@ -679,38 +680,6 @@ right: 8px;
 
     box-shadow:
         0 20px 40px rgba(15, 23, 42, 0.10);
-}
-
-/* ICON */
-.tool-icon {
-    width: 58px;
-    height: 58px;
-
-    border-radius: 18px;
-
-    background: rgba(255,255,255,0.9);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-bottom: 14px;
-
-    box-shadow:
-        0 6px 18px rgba(15,23,42,0.08);
-}
-
-.tool-icon img {
-    width: 34px;
-    height: 34px;
-    object-fit: contain;
-}
-
-/* TOOL NAME */
-.tool-card h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: #1e293b;
 }
 
 /* ==========================================================
