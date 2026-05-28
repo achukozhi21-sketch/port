@@ -86,7 +86,7 @@ line-height: 1.8;
 /* ==========================================================
    FEATURED PROJECT SHOWCASE
    PLACE THIS ENTIRE CSS BLOCK IMMEDIATELY BEFORE:
-   /* PROJECTS SECTION - LIGHT THEME WITH SCROLL ANIMATION */
+   
    ========================================================== */
 
 .featured-showcase {
@@ -595,26 +595,18 @@ right: 8px;
    ========================================================== */
 
 .tools-section {
-    padding: 90px 8%;
+    padding: 80px 8%;
 
-    background:
-        radial-gradient(circle at top left,
-        rgba(0, 255, 170, 0.12),
-        transparent 30%),
+    /* LIGHTENED PREMIUM DARK TEAL BACKGROUND */
+    background: linear-gradient(
+        135deg,
+        #0f2f38 0%,
+        #123c4a 30%,
+        #11414b 65%,
+        #164c5d 100%
+    );
 
-        radial-gradient(circle at bottom right,
-        rgba(0, 140, 255, 0.14),
-        transparent 35%),
-
-        linear-gradient(
-            135deg,
-            #071722 0%,
-            #0b2230 35%,
-            #0a1d2b 65%,
-            #06141f 100%
-        );
-
-    border-radius: 40px;
+    border-radius: 42px;
     margin: 80px auto;
     max-width: 1400px;
 
@@ -622,63 +614,35 @@ right: 8px;
     overflow: hidden;
 
     box-shadow:
-        0 30px 90px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255,255,255,0.04);
+        0 35px 100px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
-/* FLOATING GLOW EFFECT */
-.tools-section::before {
+/* SOFT PREMIUM GLOW */
+.tools-section::before{
     content: '';
     position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    background: rgba(0,255,180,0.08);
-
+    width: 420px;
+    height: 420px;
+    background: rgba(0,255,200,0.08);
     border-radius: 50%;
-
-    top: -180px;
-    left: -120px;
-
-    filter: blur(100px);
-
-    animation: floatGlow 8s ease-in-out infinite;
+    top: -140px;
+    left: -100px;
+    filter: blur(90px);
+    animation: floatGlow 10s ease-in-out infinite;
 }
 
-.tools-section::after {
+.tools-section::after{
     content: '';
     position: absolute;
-
-    width: 450px;
-    height: 450px;
-
-    background: rgba(0,140,255,0.10);
-
+    width: 380px;
+    height: 380px;
+    background: rgba(0,170,255,0.08);
     border-radius: 50%;
-
-    bottom: -180px;
-    right: -120px;
-
-    filter: blur(100px);
-
-    animation: floatGlow 10s ease-in-out infinite alternate;
-}
-
-/* PREMIUM FLOAT ANIMATION */
-@keyframes floatGlow {
-
-    0% {
-        transform: translateY(0px) translateX(0px);
-    }
-
-    50% {
-        transform: translateY(20px) translateX(20px);
-    }
-
-    100% {
-        transform: translateY(-10px) translateX(-10px);
-    }
+    bottom: -150px;
+    right: -100px;
+    filter: blur(90px);
+    animation: floatGlow 12s ease-in-out infinite alternate;
 }
 
 .tools-container {
@@ -689,53 +653,40 @@ right: 8px;
 }
 
 .tools-category {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 .tools-category:last-child {
     margin-bottom: 0;
 }
 
-/* SECTION TITLE */
 .tools-category h2 {
     text-align: center;
-    font-size: 56px;
-    font-weight: 700;
-
-    background: linear-gradient(to right, #ffffff, #7cf7ff);
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    margin-bottom: 50px;
-
+    font-size: 30px;
+    font-weight: 600;
+    color: #ecfeff;
+    margin-bottom: 35px;
     font-family: Georgia, 'Times New Roman', serif;
-
     letter-spacing: -1px;
 }
 
 /* TOOL GRID */
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 14px;
 }
 
 /* TOOL CARD */
 .tool-card {
-    background: linear-gradient(
-        145deg,
-        rgba(0,255,170,0.10),
-        rgba(0,132,255,0.10)
-    );
+    background: rgba(255, 255, 255, 0.08);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.10);
 
-    border-radius: 26px;
+    border-radius: 22px;
 
-    padding: 24px 18px;
-
-    min-height: 140px;
+    padding: 18px 12px;
+    min-height: 105px;
 
     display: flex;
     flex-direction: column;
@@ -748,8 +699,8 @@ right: 8px;
     -webkit-backdrop-filter: blur(14px);
 
     box-shadow:
-        0 12px 30px rgba(0,0,0,0.25),
-        inset 0 1px 0 rgba(255,255,255,0.05);
+        0 10px 25px rgba(0,0,0,0.18),
+        inset 0 1px 0 rgba(255,255,255,0.08);
 
     transition: all 0.45s ease;
 
@@ -757,28 +708,82 @@ right: 8px;
     overflow: hidden;
 
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(35px);
 }
 
-/* SHINE EFFECT */
-.tool-card::before {
-    content: '';
+/* PREMIUM SHINE EFFECT */
+.tool-card::before{
+    content:'';
+    position:absolute;
+    top:-120%;
+    left:-40%;
+    width:220px;
+    height:220px;
+    background:rgba(255,255,255,0.08);
+    transform:rotate(25deg);
+    transition:0.7s ease;
+}
 
-    position: absolute;
+.tool-card:hover::before{
+    top:-20%;
+    left:120%;
+}
 
-    width: 220px;
-    height: 220px;
+/* HOVER EFFECT */
+.tool-card:hover {
+    transform: translateY(-10px) scale(1.03);
 
-    background: rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.12);
 
-    border-radius: 50%;
+    border-color: rgba(120,255,230,0.30);
 
-    top: -60%;
-    left: -40%;
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.25),
+        0 10px 30px rgba(0,255,200,0.08);
+}
 
-    filter: blur(40px);
+/* TOOL ICON */
+.tool-icon {
+    width: 50px;
+    height: 50px;
 
-    transition: 0.5s ease;
+    margin: 0 auto 12px;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.12);
+
+    position: relative;
+    z-index: 2;
+}
+
+/* TOOL IMAGE */
+.tool-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* TOOL NAME */
+.tool-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #f8fafc;
+    margin: 0;
+
+    position: relative;
+    z-index: 2;
 }
 
 /* ACTIVE ANIMATION */
@@ -791,102 +796,58 @@ right: 8px;
 .tools-section.show .tool-card:nth-child(1) {
     transition-delay: 0.1s;
 }
-
 .tools-section.show .tool-card:nth-child(2) {
     transition-delay: 0.2s;
 }
-
 .tools-section.show .tool-card:nth-child(3) {
     transition-delay: 0.3s;
 }
-
 .tools-section.show .tool-card:nth-child(4) {
     transition-delay: 0.4s;
 }
-
 .tools-section.show .tool-card:nth-child(5) {
     transition-delay: 0.5s;
 }
-
 .tools-section.show .tool-card:nth-child(6) {
     transition-delay: 0.6s;
 }
-
 .tools-section.show .tool-card:nth-child(7) {
     transition-delay: 0.7s;
 }
-
 .tools-section.show .tool-card:nth-child(8) {
     transition-delay: 0.8s;
 }
 
-/* HOVER EFFECT */
-.tool-card:hover {
-    transform: translateY(-12px) scale(1.03);
+/* GLOW FLOAT ANIMATION */
+@keyframes floatGlow{
+    0%{
+        transform: translateY(0px) translateX(0px);
+    }
 
-    border-color: rgba(0,255,200,0.35);
+    50%{
+        transform: translateY(18px) translateX(18px);
+    }
 
-    box-shadow:
-        0 25px 50px rgba(0,255,170,0.12),
-        0 15px 35px rgba(0,132,255,0.14);
-}
-
-.tool-card:hover::before {
-    transform: scale(1.2);
-}
-
-/* TOOL ICON */
-.tool-icon {
-    width: 64px;
-    height: 64px;
-
-    margin-bottom: 18px;
-
-    border-radius: 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-
-    background: rgba(255,255,255,0.08);
-
-    box-shadow:
-        0 6px 18px rgba(0,0,0,0.25);
-
-    position: relative;
-    z-index: 2;
-}
-
-/* TOOL IMAGE */
-.tool-icon img {
-    width: 38px;
-    height: 38px;
-    object-fit: contain;
-}
-
-/* TOOL NAME */
-.tool-card h3 {
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
-
-    margin: 0;
-
-    position: relative;
-    z-index: 2;
+    100%{
+        transform: translateY(-10px) translateX(-10px);
+    }
 }
 
 /* TABLET */
 @media (max-width: 992px) {
 
     .tools-category h2 {
-        font-size: 46px;
+        font-size: 42px;
     }
 
     .tools-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 18px;
+    }
+
+    .tool-card {
+        min-height: 130px;
+        padding: 22px 16px;
     }
 }
 
@@ -895,45 +856,46 @@ right: 8px;
 
     .tools-section {
         padding: 70px 5%;
-        border-radius: 30px;
+        border-radius: 28px;
     }
 
     .tools-category {
-        margin-bottom: 60px;
+        margin-bottom: 65px;
     }
 
     .tools-category h2 {
-        font-size: 38px;
+        font-size: 32px;
         margin-bottom: 35px;
     }
 
     .tools-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 14px;
     }
 
     .tool-card {
-        min-height: 120px;
-        padding: 18px 12px;
-        border-radius: 20px;
+        min-height: 115px;
+        padding: 18px 10px;
+        border-radius: 18px;
     }
 
     .tool-icon {
-        width: 52px;
-        height: 52px;
-        border-radius: 16px;
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
         margin-bottom: 12px;
     }
 
     .tool-icon img {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
 
     .tool-card h3 {
         font-size: 13px;
     }
 }
+
 /* ==========================================================
    WHAT I BELIEVE SECTION
    ========================================================== */
