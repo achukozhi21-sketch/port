@@ -599,12 +599,11 @@ right: 8px;
 
     /* LIGHTENED PREMIUM DARK TEAL BACKGROUND */
     background: linear-gradient(
-        135deg,
-        #0f2f38 0%,
-        #123c4a 30%,
-        #11414b 65%,
-        #164c5d 100%
-    );
+    135deg,
+    #1d4d57,
+    #2b6777,
+    #4fa3c7
+);
 
     border-radius: 42px;
     margin: 80px auto;
