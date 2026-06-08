@@ -1331,11 +1331,7 @@ body::after {
    ========================================================== */
 
 footer {
-    background: linear-gradient(
-        135deg,
-        #1d4d57,
-        #2b6777
-    );
-
+    background: #111111;
     color: #ffffff;
+
 }
