@@ -1191,8 +1191,7 @@ font-size: 40px;
 
 
 /* ==========================================================
-   GLOBAL LIGHT TEAL-BLUE PORTFOLIO THEME
-   Inspired by Design Tools Section
+   ULTRA LIGHT PREMIUM PORTFOLIO THEME
    ========================================================== */
 
 body {
@@ -1204,26 +1203,27 @@ body {
     background: linear-gradient(
         135deg,
         #ffffff 0%,
-        #fcfefe 25%,
-        #f8fcfd 60%,
-        #f3fafc 100%
+        #feffff 30%,
+        #fcfeff 65%,
+        #f9fcfd 100%
     ) !important;
 
     position: relative;
 }
-/* Premium Glow Effects */
+
+/* Very Soft Glow */
 body::before {
     content: "";
     position: fixed;
-    width: 600px;
-    height: 600px;
-    top: -250px;
-    left: -250px;
+    width: 700px;
+    height: 700px;
+    top: -300px;
+    left: -300px;
 
-    background: rgba(79, 163, 199, 0.04);
+    background: rgba(79, 163, 199, 0.02);
 
     border-radius: 50%;
-    filter: blur(130px);
+    filter: blur(180px);
 
     z-index: -1;
 }
@@ -1231,41 +1231,35 @@ body::before {
 body::after {
     content: "";
     position: fixed;
-    width: 500px;
-    height: 500px;
-    bottom: -200px;
-    right: -200px;
+    width: 650px;
+    height: 650px;
+    bottom: -300px;
+    right: -300px;
 
-    background: rgba(43, 103, 119, 0.03);
+    background: rgba(43, 103, 119, 0.015);
 
     border-radius: 50%;
-    filter: blur(130px);
+    filter: blur(180px);
 
     z-index: -1;
 }
 
-/* ==========================================================
-   SECTION BACKGROUNDS
-   ========================================================== */
-
+/* Sections */
 .about,
 .featured-showcase,
 .contact {
     background: transparent !important;
 }
 
-/* ==========================================================
-   PROJECTS SECTION
-   ========================================================== */
-
+/* Projects Section */
 .projects {
     padding: 100px 0;
 
     background: linear-gradient(
         135deg,
-        rgba(29,77,87,0.04),
-        rgba(79,163,199,0.05),
-        rgba(255,255,255,0.85)
+        rgba(255,255,255,0.98),
+        rgba(250,253,254,0.95),
+        rgba(247,251,252,0.92)
     );
 
     overflow: hidden;
@@ -1280,46 +1274,33 @@ body::after {
     transform: translateY(0);
 }
 
-/* ==========================================================
-   SHOWCASE CARDS
-   ========================================================== */
-
+/* Showcase Cards */
 .showcase-grid.single-column .showcase-card {
-    background: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.95);
 
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    border: 1px solid rgba(79,163,199,0.08);
+    border: 1px solid rgba(0,0,0,0.04);
 
     box-shadow:
-        0 20px 60px rgba(29,77,87,0.08),
-        0 8px 25px rgba(29,77,87,0.04);
+        0 15px 40px rgba(0,0,0,0.04),
+        0 5px 15px rgba(0,0,0,0.02);
 }
 
-/* ==========================================================
-   PROJECT CARDS
-   ========================================================== */
-
+/* Project Cards */
 .project-card {
-    background: rgba(255,255,255,0.90);
+    background: rgba(255,255,255,0.96);
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(79,163,199,0.08);
+    border: 1px solid rgba(0,0,0,0.04);
 
     box-shadow:
-        0 12px 35px rgba(29,77,87,0.08);
+        0 10px 30px rgba(0,0,0,0.04);
 }
 
 .project-card:hover {
     transform: translateY(-8px);
 
     box-shadow:
-        0 25px 60px rgba(29,77,87,0.12);
+        0 20px 50px rgba(0,0,0,0.06);
 }
-
 /* ==========================================================
    ABOUT SECTION
    ========================================================== */
