@@ -1188,28 +1188,174 @@ font-size: 40px;
 }
 }
 
+
+
 /* ==========================================================
-   GLOBAL WHITE BACKGROUND THEME
+   GLOBAL LIGHT TEAL-BLUE PORTFOLIO THEME
+   Inspired by Design Tools Section
    ========================================================== */
 
 body {
-    background: #ffffff !important;
+    font-family: 'Helvetica Neue', sans-serif;
     color: #111111;
+    line-height: 1.6;
+    overflow-x: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #eef9fa 0%,
+        #e8f7f9 20%,
+        #edf8fd 50%,
+        #f5fbff 100%
+    ) !important;
+
+    position: relative;
 }
+
+/* Premium Glow Effects */
+body::before {
+    content: "";
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    top: -250px;
+    left: -250px;
+
+    background: rgba(79, 163, 199, 0.12);
+
+    border-radius: 50%;
+    filter: blur(130px);
+
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    bottom: -200px;
+    right: -200px;
+
+    background: rgba(43, 103, 119, 0.10);
+
+    border-radius: 50%;
+    filter: blur(130px);
+
+    z-index: -1;
+}
+
+/* ==========================================================
+   SECTION BACKGROUNDS
+   ========================================================== */
 
 .about,
 .featured-showcase,
-.projects,
 .contact {
-    background: #ffffff !important;
+    background: transparent !important;
 }
 
-.showcase-grid.single-column .showcase-card,
-.project-card {
-    background: #ffffff;
+/* ==========================================================
+   PROJECTS SECTION
+   ========================================================== */
+
+.projects {
+    padding: 100px 0;
+
+    background: linear-gradient(
+        135deg,
+        rgba(29,77,87,0.04),
+        rgba(79,163,199,0.05),
+        rgba(255,255,255,0.85)
+    );
+
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 1s ease, transform 1s ease;
 }
+
+.projects.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==========================================================
+   SHOWCASE CARDS
+   ========================================================== */
+
+.showcase-grid.single-column .showcase-card {
+    background: rgba(255,255,255,0.85);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(79,163,199,0.08);
+
+    box-shadow:
+        0 20px 60px rgba(29,77,87,0.08),
+        0 8px 25px rgba(29,77,87,0.04);
+}
+
+/* ==========================================================
+   PROJECT CARDS
+   ========================================================== */
+
+.project-card {
+    background: rgba(255,255,255,0.90);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(79,163,199,0.08);
+
+    box-shadow:
+        0 12px 35px rgba(29,77,87,0.08);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 60px rgba(29,77,87,0.12);
+}
+
+/* ==========================================================
+   ABOUT SECTION
+   ========================================================== */
+
+.about h2,
+.showcase-header h2,
+.projects-header h2,
+.contact h2 {
+    color: #163b45;
+}
+
+.about p,
+.showcase-header p,
+.projects-header p {
+    color: #4f6f79;
+}
+
+/* ==========================================================
+   CONTACT SECTION
+   ========================================================== */
+
+.contact {
+    background: transparent;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
 
 footer {
-    background: #111111;
+    background: linear-gradient(
+        135deg,
+        #1d4d57,
+        #2b6777
+    );
+
     color: #ffffff;
 }
