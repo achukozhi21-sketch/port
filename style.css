@@ -1486,3 +1486,25 @@ footer {
     color: #ffffff;
 
 }
+/* ============================
+   CLICKABLE FEATURED PROJECT CARDS
+============================ */
+
+.project-link{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-link:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-link .showcase-card{
+    cursor: pointer;
+}
+
+.project-link:focus{
+    outline: none;
+}
