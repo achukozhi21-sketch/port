@@ -22,14 +22,57 @@ body {
 
 /* HERO */
 .hero {
-height: 70vh;
-background: linear-gradient(135deg, #0f2027, #203a43);
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 0 20px;
+    height: 70vh;
+    min-height: 520px;
+
+    background: linear-gradient(
+        135deg,
+        #1d4d57 0%,
+        #2b6777 45%,
+        #4fa3c7 100%
+    );
+
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Glow */
+.hero::before{
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: -150px;
+    left: -120px;
+    border-radius: 50%;
+    background: rgba(0,255,200,.08);
+    filter: blur(90px);
+    animation: floatGlow 10s ease-in-out infinite;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    bottom: -140px;
+    right: -120px;
+    border-radius: 50%;
+    background: rgba(0,170,255,.08);
+    filter: blur(90px);
+    animation: floatGlow 12s ease-in-out infinite alternate;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
