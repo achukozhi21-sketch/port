@@ -708,7 +708,7 @@ right: 8px;
    ========================================================== */
 
 .tools-section {
-    padding: 80px 8%;
+    padding: 55px 8%;
 
     /* LIGHTENED PREMIUM DARK TEAL BACKGROUND */
     background: linear-gradient(
@@ -718,8 +718,8 @@ right: 8px;
     #4fa3c7
 );
 
-    border-radius: 42px;
-    margin: 80px auto;
+    border-radius: 30px;
+    margin: 50px auto;
     max-width: 1400px;
 
     position: relative;
@@ -774,10 +774,10 @@ right: 8px;
 
 .tools-category h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     color: #ecfeff;
-    margin-bottom: 35px;
+    margin-bottom: 22px;
     font-family: Georgia, 'Times New Roman', serif;
     letter-spacing: -1px;
 }
@@ -994,7 +994,7 @@ right: 8px;
     }
 
     .tools-category {
-        margin-bottom: 65px;
+        margin-bottom: 30px;
     }
 
     .tools-category h2 {
@@ -1008,7 +1008,7 @@ right: 8px;
     }
 
     .tool-card {
-        min-height: 115px;
+        min-height: 78px;
         padding: 18px 10px;
         border-radius: 18px;
     }
