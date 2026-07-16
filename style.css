@@ -20,78 +20,16 @@ body {
     background: #ffffff;
 }
 
-/* ==========================================================
-   HERO SECTION
-========================================================== */
-
+/* HERO */
 .hero {
-    height: 72vh;   /* Reduced from 90vh */
-    min-height: 520px;
-
-    /* Same gradient as Design Tools */
-    background: linear-gradient(
-        135deg,
-        #1d4d57 0%,
-        #2b6777 45%,
-        #4fa3c7 100%
-    );
-
-    color: #ffffff;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    padding: 0 20px;
-
-    position: relative;
-    overflow: hidden;
-}
-
-/* Soft Glow Effect */
-.hero::before{
-    content:'';
-    position:absolute;
-
-    width:420px;
-    height:420px;
-
-    background:rgba(0,255,200,0.08);
-
-    border-radius:50%;
-
-    top:-150px;
-    left:-120px;
-
-    filter:blur(90px);
-
-    animation:floatGlow 10s ease-in-out infinite;
-}
-
-.hero::after{
-    content:'';
-    position:absolute;
-
-    width:380px;
-    height:380px;
-
-    background:rgba(0,170,255,0.08);
-
-    border-radius:50%;
-
-    bottom:-140px;
-    right:-120px;
-
-    filter:blur(90px);
-
-    animation:floatGlow 12s ease-in-out infinite alternate;
-}
-
-/* Keep hero content above glow */
-.hero-content{
-    position:relative;
-    z-index:2;
+height: 90vh;
+background: linear-gradient(135deg, #0f2027, #203a43);
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 0 20px;
 }
 
 .hero h1 {
