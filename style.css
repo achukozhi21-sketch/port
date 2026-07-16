@@ -90,7 +90,7 @@ line-height: 1.8;
    ========================================================== */
 
 .featured-showcase {
-    padding: 120px 10%;
+    padding: 40px ;
     background: transparent;
 }
 
@@ -120,7 +120,7 @@ line-height: 1.8;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
 }
 
