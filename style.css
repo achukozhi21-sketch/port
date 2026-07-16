@@ -23,13 +23,17 @@ body {
 /* HERO */
 .hero {
 height: 90vh;
-background: background: linear-gradient(
-    135deg,
-    #1f5a63 0%,
-    #2a6772 35%,
-    #3a8193 70%,
-    #59acd8 100%
-);
+background:/* HERO */
+.hero {
+height: 90vh;
+background: linear-gradient(135deg, #0f2027, #203a43);
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 0 20px;
+}
 color: white;
 display: flex;
 justify-content: center;
