@@ -22,14 +22,26 @@ body {
 
 /* HERO */
 .hero {
-height: 90vh;
-background: linear-gradient(135deg, #0f2027, #203a43);
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
-padding: 0 20px;
+    height: 90vh;
+
+    background: linear-gradient(
+        135deg,
+        #1d4d57 0%,
+        #2b6777 45%,
+        #4fa3c7 100%
+    );
+
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 0 20px;
+
+    position: relative;
+    overflow: hidden;
 }
 
 .hero h1 {
