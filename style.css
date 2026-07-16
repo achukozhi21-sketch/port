@@ -131,8 +131,8 @@ line-height: 1.8;
 
 .showcase-grid.single-column {
     grid-template-columns: 1fr;
-    max-width: 1150px;
-    gap: 70px;
+    max-width: 900px;
+    gap: 50px;
     margin: 0 auto;
 }
 
@@ -268,7 +268,7 @@ line-height: 1.8;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 70px 60px;
+    padding: 40px 35px;
     background:
         radial-gradient(circle at top right,
         rgba(230, 62, 76, 0.03),
