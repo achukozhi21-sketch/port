@@ -28,7 +28,7 @@ body {
 
     position:relative;
 
-    min-height:100vh;
+    min-height:72vh;
 
     display:flex;
     align-items:center;
@@ -96,7 +96,7 @@ background:
 
 radial-gradient(circle,
 rgba(79,163,199,.10),
-transparent 70%);
+transparent 10%);
 
 }
 
