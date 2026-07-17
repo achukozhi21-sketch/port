@@ -128,7 +128,7 @@ transform: translateY(-2px);
     transition:
         opacity .4s ease,
         transform .4s ease,
-        visibility .4s ease;
+        visibility .8s ease;
 }
 
 .hero-action:hover .hero-note{
