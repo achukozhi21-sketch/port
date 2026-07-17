@@ -26,27 +26,29 @@ body {
 
 .hero{
 
-min-height:100vh;
+    position:relative;
 
-display:grid;
+    min-height:100vh;
 
-grid-template-columns:1fr 1fr;
+    display:flex;
+    align-items:center;
 
-align-items:center;
+    padding:0 8%;
 
-padding:0 8%;
+    overflow:hidden;
 
-position:relative;
+    background:
+    linear-gradient(
+        rgba(255,255,255,.18),
+        rgba(255,255,255,.18)
+    ),
+    url("Untitled design (1).png");
 
-overflow:hidden;
+    background-size:cover;
 
-background:
+    background-position:center;
 
-linear-gradient(
-90deg,
-#fbfdff 0%,
-#eef9fd 38%,
-#2b7488 100%);
+    background-repeat:no-repeat;
 
 }
 
