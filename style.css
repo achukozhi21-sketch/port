@@ -35,9 +35,8 @@ body {
 
     background-size: cover;
 
-    background-position: 70% center;
-
-    background-repeat:no-repeat;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 /* background glow */
 
