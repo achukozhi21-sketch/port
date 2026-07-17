@@ -101,8 +101,8 @@ transition: all 0.3s ease;
 }
 
 .btn:hover {
-background: #26bdb0;
-border-color: #26bdb0;
+background: #02b2c7;
+border-color: #02b2c7;
 transform: translateY(-2px);
 }
 .hero-action{
