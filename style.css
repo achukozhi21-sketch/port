@@ -105,29 +105,36 @@ background: #e63e4c;
 border-color: #e63e4c;
 transform: translateY(-2px);
 }
-.hero-note{
-    margin-top: 14px;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: .3px;
-    color: #c8f6ff;
+.hero-action{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:center;
+}
 
-    opacity: 0;
-    transform: translateY(-8px) scale(.98);
-    filter: blur(3px);
+.hero-note{
+    margin-top:15px;
+    font-size:15px;
+    font-weight:500;
+    color:#d9fbff;
+    letter-spacing:.4px;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(-10px);
+
+    text-shadow:0 0 18px rgba(255,255,255,.25);
 
     transition:
         opacity .4s ease,
         transform .4s ease,
-        filter .4s ease;
-
-    pointer-events: none;
+        visibility .4s ease;
 }
 
 .hero-action:hover .hero-note{
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    filter: blur(0);
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
 }
 /* ABOUT */
 
