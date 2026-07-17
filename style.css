@@ -107,17 +107,11 @@ transform: translateY(-2px);
 }
 .hero-note{
     margin-top: 18px;
-    display: inline-block;
-    padding: 8px 18px;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(10px);
-
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 500;
-    color: rgba(255,255,255,0.85);
+    color: #d8f6ff;      /* Soft light blue */
     letter-spacing: 0.3px;
+    text-align: center;
 }
 /* ABOUT */
 
