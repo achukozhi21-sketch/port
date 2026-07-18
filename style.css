@@ -1772,3 +1772,9 @@ footer {
     color: #ffffff;
 
 }
+
+
+
+.image-only .project-info {
+    display: none;
+}
