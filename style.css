@@ -709,7 +709,7 @@ right: 8px;
    ========================================================== */
 
 .tools-section {
-    padding: 80px 8%;
+    padding: 55px 8%;
 
     /* LIGHTENED PREMIUM DARK TEAL BACKGROUND */
     background: linear-gradient(
@@ -719,8 +719,8 @@ right: 8px;
     #4fa3c7
 );
 
-    border-radius: 42px;
-    margin: 80px auto;
+    border-radius: 30px;
+    margin: 50px auto;
     max-width: 1400px;
 
     position: relative;
@@ -766,7 +766,7 @@ right: 8px;
 }
 
 .tools-category {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .tools-category:last-child {
@@ -775,10 +775,10 @@ right: 8px;
 
 .tools-category h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     color: #ecfeff;
-    margin-bottom: 35px;
+    margin-bottom: 22px;
     font-family: Georgia, 'Times New Roman', serif;
     letter-spacing: -1px;
 }
@@ -796,10 +796,10 @@ right: 8px;
 
     border: 1px solid rgba(255, 255, 255, 0.10);
 
-    border-radius: 22px;
+    border-radius: 18px;
 
-    padding: 18px 12px;
-    min-height: 95px;
+    padding: 14px 10px;
+    min-height: 78px;
 
     display: flex;
     flex-direction: column;
@@ -879,10 +879,10 @@ right: 8px;
 
 /* TOOL ICON */
 .tool-icon {
-    width: 50px;
-    height: 50px;
+    width: 42px;
+    height: 42px;
 
-    margin: 0 auto 12px;
+    margin: 0 auto 8px;
 
     border-radius: 16px;
 
@@ -905,14 +905,14 @@ right: 8px;
 
 /* TOOL IMAGE */
 .tool-icon img {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
 }
 
 /* TOOL NAME */
 .tool-card h3 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     color: #f8fafc;
     margin: 0;
@@ -1005,7 +1005,7 @@ right: 8px;
 
     .tools-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
+        gap: 10px;
     }
 
     .tool-card {
