@@ -66,20 +66,49 @@ body::after {
    HERO SECTION
 ========================================================== */
 
-.hero {
-    position: relative;
-    display: flex;
-    align-items: center;
+.hero{
 
-    min-height: 90vh;
-    padding: 0 8%;
+    position:relative;
 
-    overflow: hidden;
+    min-height:100vh;
 
-    background-image: url("Untitled design (1).png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display:flex;
+    align-items:center;
+
+    padding:0 8%;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,0.10),
+        rgba(255,255,255,0.10)
+    ),
+
+    url("images/Untitled (1).png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at 20% 30%,
+    rgba(255,255,255,.15),
+    transparent 45%),
+
+    radial-gradient(circle at 85% 60%,
+    rgba(0,255,220,.08),
+    transparent 35%);
+
+    pointer-events:none;
+
 }
 
 /* ==========================================================
