@@ -325,8 +325,7 @@ body::after {
     z-index: 3;
 
     width: 420px;
-    max-height: 500px;
-    object-fit: contain;
+    
 }
 
 /* ==========================================================
