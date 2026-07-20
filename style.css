@@ -308,8 +308,8 @@ body::after {
 }
 
 .circle-glow {
-    width: 620px;
-    height: 620px;
+    width: 500px;
+    height: 500px;
 
     border-radius: 50%;
 
@@ -321,10 +321,9 @@ body::after {
 }
 
 .hero-right img {
-    position: relative;
-    z-index: 3;
-
-    width: 420px;
+    width:420px;
+    max-height:500px;
+    object-fit:contain;
     
 }
 
