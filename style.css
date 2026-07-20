@@ -2265,3 +2265,17 @@ a {
     }
 
 }
+
+
+.image-only img {
+    height: 100%;
+}
+
+.image-only {
+    display: flex;
+    align-items: stretch;
+}
+
+.image-only .project-info {
+    display: none;
+}
