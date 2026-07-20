@@ -844,12 +844,12 @@ display: block;
 
 /* PROJECT INFO */
 .project-info {
-padding: 9px;
+padding: 24px;
 }
 
 .project-info h3 {
 color: #111827;
-font-size: 28px;
+font-size: 24px;
 font-weight: 500;
 margin-bottom: 18px;
 line-height: 1.3;
