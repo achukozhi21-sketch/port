@@ -69,22 +69,27 @@ body::after {
 .hero{
     position: relative;
 
-    min-height: 72vh;
+    min-height: 100vh;
 
     display: flex;
-    justify-content: space-between;   /* Add this */
     align-items: center;
 
-    padding:0 8%;                 /* Change from 0 8% */
+    padding: 0 8%;
 
     overflow: hidden;
 
-     background:linear-gradient(
-        135deg,
-        #ffffff,
-        #f7fcff
-    );
-   
+    background:
+        linear-gradient(
+            rgba(255,255,255,.15),
+            rgba(255,255,255,.15)
+        ),
+        url("Untitled design (1).png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
 }
 .hero-overlay{
 
@@ -152,14 +157,12 @@ body::after {
    HERO LEFT
 ========================================================== */
 
-.hero-left {
+.hero-left{
     position: relative;
     z-index: 2;
 
-    flex: 1;
-    max-width: 560px;
+    max-width:650px;
 }
-
 .hero-tag {
     display: inline-block;
 
@@ -292,39 +295,6 @@ body::after {
     color: #67818a;
 }
 
-/* ==========================================================
-   HERO RIGHT
-========================================================== */
-
-.hero-right {
-    position: relative;
-
-    flex: 1;
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.circle-glow {
-    width: 500px;
-    height: 500px;
-
-    border-radius: 50%;
-
-    border: 3px solid rgba(255, 255, 255, 0.4);
-
-    box-shadow:
-        0 0 80px rgba(0, 255, 255, 0.35),
-        inset 0 0 40px rgba(255, 255, 255, 0.15);
-}
-
-.hero-right img {
-    width: 100%;
-    max-width: 650px;
-    max-height: 600px;
-    object-fit: contain;
-}
 
 /* ==========================================================
    GLASS CARD
