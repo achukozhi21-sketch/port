@@ -75,20 +75,16 @@ body::after {
     justify-content: space-between;   /* Add this */
     align-items: center;
 
-    padding: 80px 8%;                 /* Change from 0 8% */
+    padding:0 8%;                 /* Change from 0 8% */
 
     overflow: hidden;
 
-    background:
-    linear-gradient(
-        rgba(255,255,255,0.10),
-        rgba(255,255,255,0.10)
-    ),
-    url("Untitled design (1).png");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+     background:linear-gradient(
+        135deg,
+        #ffffff,
+        #f7fcff
+    );
+   
 }
 .hero-overlay{
 
