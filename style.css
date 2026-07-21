@@ -955,7 +955,7 @@ body::after {
 .project-card img {
     display: block;
 
-    width: 100%;
+    width: 70%;
     height: 300px;
 
     object-fit: cover;
@@ -1005,7 +1005,7 @@ body::after {
 .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 18px;
 }
 
 .tags span {
@@ -1156,7 +1156,7 @@ body::after {
     }
 
     .tags {
-        gap: 8px;
+        gap: 15px;
     }
 
     .tags span {
