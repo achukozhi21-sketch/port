@@ -1,3 +1,5 @@
+Backup-css
+
 /* ==========================================================
    RESET
 ========================================================== */
@@ -65,555 +67,280 @@ body::after {
 /* ==========================================================
    HERO SECTION
 ========================================================== */
-/* ==========================================================
-   PREMIUM HERO SECTION
-========================================================== */
 
 .hero{
-    position:relative;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    overflow:hidden;
-    background:#07151d;
-}
+    position: relative;
 
-/* ===============================
-   BACKGROUND IMAGE
-================================ */
+    min-height: 100vh;
 
-.hero-bg{
-    position:absolute;
-    inset:0;
+    display: flex;
+    align-items: center;
 
-    background-image:
-        linear-gradient(rgba(7,21,29,.55),rgba(7,21,29,.60)),
+    padding: 0 8%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.15),
+            rgba(255,255,255,.15)
+        ),
         url("Untitled design (1).png");
 
-    background-size:cover;
-    background-position:center right;
-    background-repeat:no-repeat;
+    background-size: cover;
 
-    z-index:0;
+    background-position: center;
 
-    transform:scale(1.05);
+    background-repeat: no-repeat;
 }
-
-/* ===============================
-   OVERLAY
-================================ */
-
 .hero-overlay{
 
     position:absolute;
+
     inset:0;
 
     background:
 
-    radial-gradient(circle at 15% 25%,
-    rgba(255,255,255,.10),
+    radial-gradient(circle at 20% 30%,
+    rgba(255,255,255,.15),
     transparent 45%),
 
-    radial-gradient(circle at 80% 60%,
-    rgba(0,255,255,.12),
-    transparent 40%),
+    radial-gradient(circle at 85% 60%,
+    rgba(0,255,220,.08),
+    transparent 35%);
 
-    linear-gradient(
-    90deg,
-    rgba(7,21,29,.88) 0%,
-    rgba(7,21,29,.70) 38%,
-    rgba(7,21,29,.28) 65%,
-    rgba(7,21,29,.10) 100%);
-
-    z-index:1;
-}
-
-/* ===============================
-   FLOATING GLOW
-================================ */
-
-.hero-glow{
-
-    position:absolute;
-    border-radius:50%;
-    filter:blur(120px);
-
-    z-index:1;
-}
-
-.hero-glow-1{
-
-    width:450px;
-    height:450px;
-
-    left:-120px;
-    top:-120px;
-
-    background:rgba(0,255,220,.16);
+    pointer-events:none;
 
 }
 
-.hero-glow-2{
+/* ==========================================================
+   HERO BACKGROUND GLOW
+========================================================== */
 
-    width:500px;
-    height:500px;
+.hero::before {
+    content: "";
+    position: absolute;
 
-    right:-180px;
-    bottom:-180px;
+    width: 900px;
+    height: 900px;
 
-    background:rgba(0,150,255,.15);
+    top: -150px;
+    right: -250px;
 
+    background: radial-gradient(
+        circle,
+        rgba(0, 255, 255, 0.18),
+        transparent 65%
+    );
+
+    filter: blur(70px);
 }
 
-/* ===============================
-   CONTENT CONTAINER
-================================ */
+.hero::after {
+    content: "";
+    position: absolute;
 
-.hero-container{
+    width: 600px;
+    height: 600px;
 
-    position:relative;
-    z-index:2;
+    left: -200px;
+    bottom: -200px;
 
-    width:100%;
-    max-width:1400px;
+    background: radial-gradient(
+        circle,
+        rgba(79, 163, 199, 0.10),
+        transparent 70%
+    );
 
-    margin:auto;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:0 8%;
+    filter: blur(60px);
 }
 
-/* ===============================
-   LEFT SIDE
-================================ */
+/* ==========================================================
+   HERO LEFT
+========================================================== */
 
-.hero-content{
+.hero-left{
+    position: relative;
+    z-index: 2;
 
-    width:52%;
     max-width:650px;
+}
+.hero-tag {
+    display: inline-block;
 
+    padding: 10px 22px;
+
+    margin-bottom: 30px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(79, 163, 199, 0.35);
+
+    background: rgba(255, 255, 255, 0.6);
+
+    color: #184654;
+
+    font-size: 13px;
+    letter-spacing: 1px;
 }
 
-/* ===============================
-   TAG
-================================ */
+.hero-left h1 {
+    margin-bottom: 25px;
 
-.hero-tag{
+    font-family: Georgia, serif;
+    font-size: 78px;
+    font-weight: 500;
+    line-height: 1;
 
-    display:inline-block;
-
-    padding:10px 24px;
-
-    margin-bottom:35px;
-
-    border-radius:50px;
-
-    color:#fff;
-
-    font-size:13px;
-
-    letter-spacing:2px;
-
-    border:1px solid rgba(255,255,255,.15);
-
-    background:rgba(255,255,255,.08);
-
-    backdrop-filter:blur(15px);
-
+    color: #112534;
 }
 
-/* ===============================
-   TITLE
-================================ */
+.hero-left h1 span {
+    background: linear-gradient(
+        90deg,
+        #28c6df,
+        #2b7488
+    );
 
-.hero-content h1{
-
-    font-size:82px;
-
-    line-height:1.05;
-
-    font-family:Georgia,serif;
-
-    color:#fff;
-
-    font-weight:600;
-
-    margin-bottom:30px;
-
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.hero-content h1 span{
+.hero-left p {
+    margin-bottom: 40px;
 
-    background:linear-gradient(
-    90deg,
-    #49d8ff,
-    #9af5ff);
+    font-size: 22px;
+    line-height: 1.8;
 
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
+    color: #45606b;
 }
 
-/* ===============================
-   DESCRIPTION
-================================ */
+/* ==========================================================
+   HERO BUTTONS
+========================================================== */
 
-.hero-content p{
+.hero-buttons {
+    display: flex;
+    gap: 18px;
 
-    font-size:22px;
-
-    line-height:1.8;
-
-    color:#d7e4ea;
-
-    max-width:620px;
-
-    margin-bottom:45px;
-
+    margin-bottom: 55px;
 }
 
-/* ===============================
-   BUTTONS
-================================ */
+.btn {
+    display: inline-block;
 
-.hero-buttons{
+    padding: 17px 34px;
 
-    display:flex;
-    gap:20px;
+    border-radius: 60px;
 
-    margin-bottom:55px;
+    text-decoration: none;
 
+    font-weight: 600;
+
+    transition: all 0.35s ease;
 }
 
-.btn{
-
-    padding:18px 34px;
-
-    border-radius:60px;
-
-    font-weight:600;
-
-    transition:.35s;
-
+.btn:hover {
+    transform: translateY(-5px);
 }
 
-.btn-primary{
+.btn-primary {
+    color: #fff;
 
-    background:linear-gradient(
-    135deg,
-    #2ec8ff,
-    #0b8dc6);
-
-    color:#fff;
-
-    box-shadow:0 15px 35px rgba(0,200,255,.25);
-
+    background: linear-gradient(
+        90deg,
+        #0d8098,
+        #0c5670
+    );
 }
 
-.btn-primary:hover{
+.btn-secondary {
+    color: #123847;
 
-    transform:translateY(-5px);
+    background: rgba(255, 255, 255, 0.75);
 
+    border: 1px solid rgba(43, 116, 136, 0.30);
 }
 
-.btn-secondary{
+/* ==========================================================
+   HERO STATS
+========================================================== */
 
-    background:rgba(255,255,255,.10);
-
-    color:#fff;
-
-    border:1px solid rgba(255,255,255,.15);
-
-    backdrop-filter:blur(15px);
-
+.hero-stats {
+    display: flex;
+    gap: 20px;
 }
 
-.btn-secondary:hover{
+.stat-card {
+    min-width: 150px;
 
-    background:rgba(255,255,255,.18);
+    padding: 28px;
 
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-/* ===============================
-   STATS
-================================ */
+.stat-card h2 {
+    margin-bottom: 8px;
 
-.hero-stats{
+    font-size: 40px;
 
-    display:flex;
-    gap:20px;
-
+    color: #163b45;
 }
 
-.stat-card{
-
-    min-width:150px;
-
-    padding:22px;
-
-    border-radius:22px;
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.08);
-
-    backdrop-filter:blur(25px);
-
+.stat-card span {
+    color: #67818a;
 }
 
-.stat-card h2{
 
-    color:#fff;
+/* ==========================================================
+   GLASS CARD
+========================================================== */
 
-    font-size:38px;
+.glass-card {
+    position: absolute;
 
-    margin-bottom:8px;
+    bottom: 70px;
+    left: 40px;
 
+    z-index: 5;
+
+    padding: 28px 34px;
+
+    border-radius: 24px;
+
+    color: #fff;
+
+    background: rgba(8, 28, 40, 0.55);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(25px);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
-.stat-card span{
+.glass-card small {
+    display: block;
 
-    color:#d3e7ee;
+    margin-bottom: 10px;
 
+    color: #49d8ff;
+
+    letter-spacing: 2px;
 }
 
-/* ===============================
-   RIGHT SIDE
-================================ */
-
-.hero-image{
-
-    width:42%;
-
-    display:flex;
-    justify-content:center;
-    align-items:flex-end;
-
+.glass-card h4 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5;
 }
 
-.hero-image img{
-
-width:100%;
-
-max-width:620px;
-
-border-radius:25px;
-
-filter:
-
-drop-shadow(0 50px 80px rgba(0,0,0,.45));
-
-transition:.6s;
-
-}
-.hero-image:hover img{
-
-transform:scale(1.03);
-
-}
-/* ==========================================
-   FLOATING CIRCLES
-========================================== */
-
-.floating-circle{
-
-    position:absolute;
-
-    border-radius:50%;
-
-    border:1px solid rgba(255,255,255,.15);
-
-    backdrop-filter:blur(10px);
-
-    animation:floatCircle 6s ease-in-out infinite;
-
-}
-
-.circle1{
-
-    width:90px;
-    height:90px;
-
-    left:40px;
-    top:80px;
-
-    background:rgba(0,255,255,.08);
-
-}
-
-.circle2{
-
-    width:140px;
-    height:140px;
-
-    right:40px;
-    bottom:140px;
-
-    background:rgba(255,255,255,.06);
-
-    animation-delay:2s;
-
-}
-
-/* ==========================================
-   PREMIUM GLASS CARD
-========================================== */
-
-.glass-card{
-
-    position:absolute;
-
-    bottom:40px;
-    left:-30px;
-
-    padding:24px 30px;
-
-    width:260px;
-
-    border-radius:24px;
-
-    background:rgba(255,255,255,.10);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(255,255,255,.12);
-
-    box-shadow:
-
-    0 20px 60px rgba(0,0,0,.35);
-
-}
-
-.glass-card small{
-
-    color:#7cecff;
-
-    font-size:12px;
-
-    letter-spacing:2px;
-
-    display:block;
-
-    margin-bottom:12px;
-
-}
-
-.glass-card h4{
-
-    color:white;
-
-    font-size:22px;
-
-    line-height:1.4;
-
-    font-weight:500;
-
-}
-
-/* ==========================================
-   SCROLL INDICATOR
-========================================== */
-
-.scroll-indicator{
-
-    position:absolute;
-
-    left:50%;
-
-    bottom:35px;
-
-    transform:translateX(-50%);
-
-    width:30px;
-
-    height:55px;
-
-    border-radius:30px;
-
-    border:2px solid rgba(255,255,255,.35);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:flex-start;
-
-    z-index:5;
-
-}
-
-.scroll-indicator span{
-
-    width:6px;
-
-    height:10px;
-
-    margin-top:8px;
-
-    border-radius:20px;
-
-    background:white;
-
-    animation:scrollDown 2s infinite;
-
-}
-
-/* ==========================================
-   HERO IMAGE ANIMATION
-========================================== */
-
-.hero-image img{
-
-    animation:heroFloat 6s ease-in-out infinite;
-
-}
-
-/* ==========================================
-   HERO CONTENT
-========================================== */
-
-.hero-content{
-
-    animation:fadeLeft 1.2s ease;
-
-}
-
-.hero-image{
-
-    position:relative;
-
-    animation:fadeRight 1.4s ease;
-
-}
-
-/* ==========================================
-   BUTTON HOVER
-========================================== */
-
-.btn{
-
-transition:
-
-transform .35s ease,
-
-box-shadow .35s ease,
-
-background .35s ease;
-
-}
-
-.btn:hover{
-
-transform:translateY(-6px);
-
-box-shadow:
-
-0 25px 45px rgba(0,0,0,.25);
-
-}
 /* ==========================================================
    ABOUT SECTION
 ========================================================== */
@@ -2596,391 +2323,4 @@ a {
 
 .featured-projects .project-track {
     gap: 40px;
-}
-/* ==========================================
-   ANIMATIONS
-========================================== */
-
-@keyframes heroFloat{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-18px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
-}
-
-@keyframes floatCircle{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-18px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
-}
-
-@keyframes scrollDown{
-
-    0%{
-
-        opacity:0;
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        opacity:1;
-
-    }
-
-    100%{
-
-        opacity:0;
-
-        transform:translateY(20px);
-
-    }
-
-}
-
-@keyframes fadeLeft{
-
-    from{
-
-        opacity:0;
-
-        transform:translateX(-60px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateX(0);
-
-    }
-
-}
-
-@keyframes fadeRight{
-
-    from{
-
-        opacity:0;
-
-        transform:translateX(60px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateX(0);
-
-    }
-
-}
-/* ==========================================================
-   PREMIUM HERO RESPONSIVE
-========================================================== */
-
-/* Large Screens */
-@media (min-width:1600px){
-
-.hero-content h1{
-    font-size:100px;
-}
-
-.hero-content p{
-    font-size:24px;
-}
-
-.hero-image img{
-    max-width:720px;
-}
-
-}
-
-/* ===============================
-   LAPTOP
-================================ */
-
-@media (max-width:1200px){
-
-.hero-container{
-    padding:0 6%;
-}
-
-.hero-content h1{
-    font-size:68px;
-}
-
-.hero-content p{
-    font-size:20px;
-}
-
-.hero-image img{
-    max-width:540px;
-}
-
-.glass-card{
-    left:0;
-    bottom:20px;
-}
-
-}
-
-/* ===============================
-   TABLET
-================================ */
-
-@media (max-width:992px){
-
-.hero{
-    min-height:auto;
-    padding:120px 0 80px;
-}
-
-.hero-container{
-
-    flex-direction:column;
-
-    text-align:center;
-
-}
-
-.hero-content{
-
-    width:100%;
-    max-width:700px;
-
-}
-
-.hero-content p{
-
-    margin-left:auto;
-    margin-right:auto;
-
-}
-
-.hero-buttons{
-
-    justify-content:center;
-
-}
-
-.hero-stats{
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-
-}
-
-.hero-image{
-
-    width:100%;
-
-    margin-top:70px;
-
-}
-
-.hero-image img{
-
-    max-width:520px;
-
-}
-
-.glass-card{
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    bottom:-20px;
-
-}
-
-}
-
-/* ===============================
-   MOBILE
-================================ */
-
-@media (max-width:768px){
-
-.hero{
-
-    min-height:auto;
-
-    padding:90px 0 70px;
-
-}
-
-.hero-content h1{
-
-    font-size:48px;
-
-    line-height:1.15;
-
-}
-
-.hero-content p{
-
-    font-size:17px;
-
-    line-height:1.8;
-
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-    gap:15px;
-
-}
-
-.hero-buttons .btn{
-
-    width:100%;
-
-}
-
-.hero-stats{
-
-    gap:15px;
-
-}
-
-.stat-card{
-
-    width:140px;
-
-    min-width:unset;
-
-    padding:18px;
-
-}
-
-.stat-card h2{
-
-    font-size:30px;
-
-}
-
-.hero-image{
-
-    margin-top:60px;
-
-}
-
-.hero-image img{
-
-    max-width:360px;
-
-}
-
-.glass-card{
-
-    width:220px;
-
-    padding:18px;
-
-}
-
-.glass-card h4{
-
-    font-size:18px;
-
-}
-
-.hero-glow{
-
-    display:none;
-
-}
-
-.scroll-indicator{
-
-    display:none;
-
-}
-
-}
-
-/* ===============================
-   SMALL MOBILE
-================================ */
-
-@media (max-width:480px){
-
-.hero-content h1{
-
-    font-size:38px;
-
-}
-
-.hero-content p{
-
-    font-size:15px;
-
-}
-
-.hero-tag{
-
-    font-size:11px;
-
-    padding:8px 18px;
-
-}
-
-.stat-card{
-
-    width:120px;
-
-}
-
-.hero-image img{
-
-    max-width:300px;
-
-}
-
-.glass-card{
-
-    display:none;
-
-}
-
 }
