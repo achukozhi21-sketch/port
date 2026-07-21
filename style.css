@@ -583,7 +583,7 @@ body::after {
     display: block;
 
     width: 100%;
-    height: 420px;
+    height: 440px;
 
     object-fit: cover;
     object-position: center;
@@ -667,8 +667,7 @@ body::after {
 .showcase-grid.single-column .showcase-content p {
     max-width: 520px;
 
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 17px;
 
     color: #64748b;
 }
