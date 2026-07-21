@@ -867,7 +867,7 @@ body::after {
 
 .project-track {
     display: flex;
-    gap: 20px;
+    gap: 40px;
 
     transition: transform 0.6s ease;
 }
