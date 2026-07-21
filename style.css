@@ -2308,3 +2308,40 @@ a {
 .image-only .project-info {
     display: none;
 }
+
+/* ==========================================
+   Featured Projects Only
+========================================== */
+
+.featured-projects .project-card {
+    flex: 0 0 calc(38% - 15px);   /* Smaller width */
+    max-width: 460px;
+    border-radius: 18px;
+}
+
+.featured-projects .project-card img {
+    height: 220px;                /* Smaller image */
+}
+
+.featured-projects .project-info {
+    padding: 16px;
+}
+
+.featured-projects .project-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.featured-projects .project-info p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.featured-projects .tags span {
+    padding: 5px 10px;
+    font-size: 11px;
+}
+
+.featured-projects .project-track {
+    gap: 20px;
+}
