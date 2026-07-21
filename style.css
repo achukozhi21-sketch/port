@@ -67,29 +67,28 @@ body::after {
 ========================================================== */
 
 .hero{
+    position: relative;
 
-    position:relative;
+    min-height: 72vh;
 
-    height:72vh;
+    display: flex;
+    justify-content: space-between;   /* Add this */
+    align-items: center;
 
-    display:flex;
-    align-items:center;
+    padding: 80px 8%;                 /* Change from 0 8% */
 
-    padding:0 8%;
-
-    overflow:hidden;
+    overflow: hidden;
 
     background:
     linear-gradient(
         rgba(255,255,255,0.10),
         rgba(255,255,255,0.10)
     ),
-
     url("Untitled design (1).png");
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .hero-overlay{
 
@@ -160,6 +159,8 @@ body::after {
 .hero-left {
     position: relative;
     z-index: 2;
+
+    flex: 1;
     max-width: 560px;
 }
 
@@ -302,8 +303,10 @@ body::after {
 .hero-right {
     position: relative;
 
+    flex: 1;
+
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -321,10 +324,10 @@ body::after {
 }
 
 .hero-right img {
-    width:420px;
-    max-height:500px;
-    object-fit:contain;
-    
+    width: 100%;
+    max-width: 650px;
+    max-height: 600px;
+    object-fit: contain;
 }
 
 /* ==========================================================
