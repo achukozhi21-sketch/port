@@ -1,3 +1,5 @@
+Backup-html
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,112 +11,32 @@
 </head>
 <body>
 
-<!-- ================= HERO SECTION ================= -->
-
 <section class="hero">
 
-    <!-- Background Image -->
-    <div class="hero-bg"></div>
-
-    <!-- Gradient Overlay -->
     <div class="hero-overlay"></div>
 
-    <!-- Decorative Blur -->
-    <div class="hero-glow hero-glow-1"></div>
-    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-left">
 
-    <div class="hero-container">
+        <h1>
+            Designing <br>
+            Experiences <br>
+            <span>That Matter.</span>
+        </h1>
 
-        <!-- LEFT CONTENT -->
+        <p>
+            I create brands, visuals and digital experiences
+            that connect, inspire and leave a lasting impact.
+        </p>
 
-        <div class="hero-content">
-
-            <span class="hero-tag">
-                CREATIVE DESIGNER • UI/UX • BRANDING
-            </span>
-
-            <h1>
-                Designing
-                <br>
-                Experiences
-                <br>
-                <span>That Matter.</span>
-            </h1>
-
-            <p>
-
-                I create premium digital experiences,
-                visual identities and modern interfaces
-                that inspire people and elevate brands.
-
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#projects" class="btn btn-primary">
-                    View Portfolio →
-                </a>
-
-                <a href="#contact" class="btn btn-secondary">
-                    Let's Talk
-                </a>
-
-            </div>
-
-            <!-- Statistics -->
-
-            <div class="hero-stats">
-
-                <div class="stat-card">
-                    <h2>50+</h2>
-                    <span>Projects</span>
-                </div>
-
-                <div class="stat-card">
-                    <h2>4+</h2>
-                    <span>Years Experience</span>
-                </div>
-
-                <div class="stat-card">
-                    <h2>100%</h2>
-                    <span>Creative</span>
-                </div>
-
-            </div>
-
+        <div class="hero-buttons">
+            <a href="#" class="btn btn-primary">View Portfolio →</a>
+            <a href="#" class="btn btn-secondary">Let's Talk ↗</a>
         </div>
 
-        <!-- RIGHT IMAGE -->
-
-        <div class="hero-image">
-
-    <div class="floating-circle circle1"></div>
-    <div class="floating-circle circle2"></div>
-
-    <img src="Untitled design (1).png" alt="Designer">
-
-    <div class="glass-card">
-
-        <small>FEATURED PROJECT</small>
-
-        <h4>
-            Luxury Brand
-            <br>
-            Identity Design
-        </h4>
-
     </div>
 
-</div>
-
-    </div>
-<div class="scroll-indicator">
-
-    <span></span>
-
-</div>
 </section>
-    
+
 <!-- ABOUT SECTION -->
 <section class="about">
 <h2>About Me</h2>
@@ -606,34 +528,6 @@ My work focuses on branding, motion design, video editing, and digital storytell
 
 <!-- JAVASCRIPT -->
 <script>
-
-const hero=document.querySelector(".hero");
-
-const image=document.querySelector(".hero-image");
-
-const glow1=document.querySelector(".hero-glow-1");
-
-const glow2=document.querySelector(".hero-glow-2");
-
-hero.addEventListener("mousemove",(e)=>{
-
-const x=e.clientX/window.innerWidth;
-
-const y=e.clientY/window.innerHeight;
-
-image.style.transform=
-`translate(${x*20-10}px,${y*20-10}px)`;
-
-glow1.style.transform=
-`translate(${x*40}px,${y*40}px)`;
-
-glow2.style.transform=
-`translate(${-x*40}px,${-y*40}px)`;
-
-});
-
-</script>
-    
 /* =========================
 PROJECT SLIDER
 ========================= */
