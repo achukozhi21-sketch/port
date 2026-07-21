@@ -396,17 +396,224 @@ body::after {
 
 .hero-image img{
 
-    width:100%;
-    max-width:620px;
+width:100%;
 
-    object-fit:contain;
+max-width:620px;
 
-    filter:
+border-radius:25px;
 
-    drop-shadow(0 35px 70px rgba(0,0,0,.45));
+filter:
+
+drop-shadow(0 50px 80px rgba(0,0,0,.45));
+
+transition:.6s;
+
+}
+.hero-image:hover img{
+
+transform:scale(1.03);
+
+}
+/* ==========================================
+   FLOATING CIRCLES
+========================================== */
+
+.floating-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    animation:floatCircle 6s ease-in-out infinite;
 
 }
 
+.circle1{
+
+    width:90px;
+    height:90px;
+
+    left:40px;
+    top:80px;
+
+    background:rgba(0,255,255,.08);
+
+}
+
+.circle2{
+
+    width:140px;
+    height:140px;
+
+    right:40px;
+    bottom:140px;
+
+    background:rgba(255,255,255,.06);
+
+    animation-delay:2s;
+
+}
+
+/* ==========================================
+   PREMIUM GLASS CARD
+========================================== */
+
+.glass-card{
+
+    position:absolute;
+
+    bottom:40px;
+    left:-30px;
+
+    padding:24px 30px;
+
+    width:260px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+
+    0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.glass-card small{
+
+    color:#7cecff;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    display:block;
+
+    margin-bottom:12px;
+
+}
+
+.glass-card h4{
+
+    color:white;
+
+    font-size:22px;
+
+    line-height:1.4;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+   SCROLL INDICATOR
+========================================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:35px;
+
+    transform:translateX(-50%);
+
+    width:30px;
+
+    height:55px;
+
+    border-radius:30px;
+
+    border:2px solid rgba(255,255,255,.35);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    z-index:5;
+
+}
+
+.scroll-indicator span{
+
+    width:6px;
+
+    height:10px;
+
+    margin-top:8px;
+
+    border-radius:20px;
+
+    background:white;
+
+    animation:scrollDown 2s infinite;
+
+}
+
+/* ==========================================
+   HERO IMAGE ANIMATION
+========================================== */
+
+.hero-image img{
+
+    animation:heroFloat 6s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   HERO CONTENT
+========================================== */
+
+.hero-content{
+
+    animation:fadeLeft 1.2s ease;
+
+}
+
+.hero-image{
+
+    position:relative;
+
+    animation:fadeRight 1.4s ease;
+
+}
+
+/* ==========================================
+   BUTTON HOVER
+========================================== */
+
+.btn{
+
+transition:
+
+transform .35s ease,
+
+box-shadow .35s ease,
+
+background .35s ease;
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+box-shadow:
+
+0 25px 45px rgba(0,0,0,.25);
+
+}
 /* ==========================================================
    ABOUT SECTION
 ========================================================== */
@@ -2389,4 +2596,391 @@ a {
 
 .featured-projects .project-track {
     gap: 40px;
+}
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes heroFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatCircle{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes scrollDown{
+
+    0%{
+
+        opacity:0;
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+}
+
+@keyframes fadeLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+/* ==========================================================
+   PREMIUM HERO RESPONSIVE
+========================================================== */
+
+/* Large Screens */
+@media (min-width:1600px){
+
+.hero-content h1{
+    font-size:100px;
+}
+
+.hero-content p{
+    font-size:24px;
+}
+
+.hero-image img{
+    max-width:720px;
+}
+
+}
+
+/* ===============================
+   LAPTOP
+================================ */
+
+@media (max-width:1200px){
+
+.hero-container{
+    padding:0 6%;
+}
+
+.hero-content h1{
+    font-size:68px;
+}
+
+.hero-content p{
+    font-size:20px;
+}
+
+.hero-image img{
+    max-width:540px;
+}
+
+.glass-card{
+    left:0;
+    bottom:20px;
+}
+
+}
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width:992px){
+
+.hero{
+    min-height:auto;
+    padding:120px 0 80px;
+}
+
+.hero-container{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    width:100%;
+    max-width:700px;
+
+}
+
+.hero-content p{
+
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.hero-buttons{
+
+    justify-content:center;
+
+}
+
+.hero-stats{
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-image{
+
+    width:100%;
+
+    margin-top:70px;
+
+}
+
+.hero-image img{
+
+    max-width:520px;
+
+}
+
+.glass-card{
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:-20px;
+
+}
+
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width:768px){
+
+.hero{
+
+    min-height:auto;
+
+    padding:90px 0 70px;
+
+}
+
+.hero-content h1{
+
+    font-size:48px;
+
+    line-height:1.15;
+
+}
+
+.hero-content p{
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.hero-buttons .btn{
+
+    width:100%;
+
+}
+
+.hero-stats{
+
+    gap:15px;
+
+}
+
+.stat-card{
+
+    width:140px;
+
+    min-width:unset;
+
+    padding:18px;
+
+}
+
+.stat-card h2{
+
+    font-size:30px;
+
+}
+
+.hero-image{
+
+    margin-top:60px;
+
+}
+
+.hero-image img{
+
+    max-width:360px;
+
+}
+
+.glass-card{
+
+    width:220px;
+
+    padding:18px;
+
+}
+
+.glass-card h4{
+
+    font-size:18px;
+
+}
+
+.hero-glow{
+
+    display:none;
+
+}
+
+.scroll-indicator{
+
+    display:none;
+
+}
+
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width:480px){
+
+.hero-content h1{
+
+    font-size:38px;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+}
+
+.hero-tag{
+
+    font-size:11px;
+
+    padding:8px 18px;
+
+}
+
+.stat-card{
+
+    width:120px;
+
+}
+
+.hero-image img{
+
+    max-width:300px;
+
+}
+
+.glass-card{
+
+    display:none;
+
+}
+
 }
