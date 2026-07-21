@@ -2058,7 +2058,7 @@ body::after {
 ========================================================== */
 
 .contact {
-    padding: 80px 10%;
+    padding: 40px 10%;
     text-align: center;
     background: transparent;
 }
@@ -2074,7 +2074,7 @@ body::after {
 
 .contact p {
     max-width: 700px;
-    margin: 0 auto 40px;
+    margin: 0 auto 20px;
 
     font-size: 17px;
     line-height: 1.8;
@@ -2093,7 +2093,7 @@ body::after {
 ========================================================== */
 
 footer {
-    padding: 25px 10%;
+    padding: 15px 8%;
 
     text-align: center;
 
