@@ -786,7 +786,7 @@ body::after {
 ========================================================== */
 
 .projects {
-    padding: 100px 0;
+    padding: 80px 0 25px;
     overflow: hidden;
 
     background: linear-gradient(
@@ -2058,7 +2058,7 @@ body::after {
 ========================================================== */
 
 .contact {
-    padding: 40px 10%;
+    padding: 15px 10% 25px;
     text-align: center;
     background: transparent;
 }
@@ -2074,10 +2074,10 @@ body::after {
 
 .contact p {
     max-width: 700px;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
 
     font-size: 17px;
-    line-height: 1.8;
+    line-height: 1.6;
 
     color: #4f6f79;
 }
@@ -2093,7 +2093,7 @@ body::after {
 ========================================================== */
 
 footer {
-    padding: 15px 8%;
+    padding: 10px 8%;
 
     text-align: center;
 
