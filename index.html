@@ -606,6 +606,34 @@ My work focuses on branding, motion design, video editing, and digital storytell
 
 <!-- JAVASCRIPT -->
 <script>
+
+const hero=document.querySelector(".hero");
+
+const image=document.querySelector(".hero-image");
+
+const glow1=document.querySelector(".hero-glow-1");
+
+const glow2=document.querySelector(".hero-glow-2");
+
+hero.addEventListener("mousemove",(e)=>{
+
+const x=e.clientX/window.innerWidth;
+
+const y=e.clientY/window.innerHeight;
+
+image.style.transform=
+`translate(${x*20-10}px,${y*20-10}px)`;
+
+glow1.style.transform=
+`translate(${x*40}px,${y*40}px)`;
+
+glow2.style.transform=
+`translate(${-x*40}px,${-y*40}px)`;
+
+});
+
+</script>
+    
 /* =========================
 PROJECT SLIDER
 ========================= */
