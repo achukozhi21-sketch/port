@@ -609,11 +609,11 @@ body::after {
 
     background: linear-gradient(
         135deg,
-        #e63e4c,
-        #ff6b6b
+        #2563eb,
+        #3b82f6
     );
 
-    box-shadow: 0 8px 20px rgba(230, 62, 76, 0.25);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
 }
 
 /* ==========================================================
