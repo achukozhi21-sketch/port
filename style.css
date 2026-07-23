@@ -582,7 +582,7 @@ body::after {
 
     background: radial-gradient(
         circle at top right,
-        rgba(230, 62, 76, 0.03),
+        rgba(37, 99, 235, 0.05),
         transparent 55%
     );
 }
@@ -658,7 +658,7 @@ body::after {
 
     background: linear-gradient(
         90deg,
-        #e63e4c,
+        #2563eb,
         transparent
     );
 }
