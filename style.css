@@ -658,7 +658,8 @@ body::after {
 
     background: linear-gradient(
         90deg,
-        #2563eb,
+        #28c6df,
+        #2b7488
         transparent
     );
 }
