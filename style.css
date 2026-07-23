@@ -373,7 +373,7 @@ body::after {
 ========================================================== */
 
 .featured-showcase {
-    padding: 20px 10% 80px;
+    padding: 60px 10% 80px;
     background: transparent;
 }
 
@@ -385,7 +385,7 @@ body::after {
 }
 
 .showcase-header h2 {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
     font-size: 36px;
     font-weight: 700;
@@ -659,7 +659,7 @@ body::after {
     background: linear-gradient(
         90deg,
         #28c6df,
-        #2b7488 
+        transparent 
     );
 }
 
