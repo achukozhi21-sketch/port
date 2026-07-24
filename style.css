@@ -346,7 +346,7 @@ body::after {
 
 .about {
     margin-top: -20px;
-    padding: 70px 10% 60px;
+    padding: 70px 10% 25px;
     text-align: center;
     background: transparent;
 }
@@ -373,7 +373,7 @@ body::after {
 ========================================================== */
 
 .featured-showcase {
-    padding: 70px 10% 60px;
+    padding: 25px 10% 60px;
     background: transparent;
 }
 
