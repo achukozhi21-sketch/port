@@ -1589,7 +1589,7 @@ body::after {
     position: relative;
     overflow: hidden;
 
-    margin-top: 50px;
+    margin-top: 20px;
     padding: 50px 8%;
 
     background: linear-gradient(
