@@ -163,7 +163,7 @@ body::after {
     z-index: 2;
 
     max-width:580px;
-    margin-left: -20px;
+    margin-left: -30px;
 }
 .hero-tag {
     display: inline-block;
