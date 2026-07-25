@@ -162,8 +162,8 @@ body::after {
     position: relative;
     z-index: 2;
 
-    max-width:650px;
-    margin-left: -40px;
+    max-width:550px;
+    margin-left: -30px;
 }
 .hero-tag {
     display: inline-block;
@@ -188,7 +188,7 @@ body::after {
     margin-bottom: 25px;
 
     font-family: Georgia, serif;
-    font-size: 78px;
+    font-size: 50px;
     font-weight: 500;
     line-height: 1;
 
@@ -209,7 +209,7 @@ body::after {
 .hero-left p {
     margin-bottom: 40px;
 
-    font-size: 22px;
+    font-size: 20px;
     line-height: 1.8;
 
     color: #45606b;
