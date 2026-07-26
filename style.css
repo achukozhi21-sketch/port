@@ -996,7 +996,17 @@ SHOWCASE VIDEO
 .project-card:hover img {
     transform: scale(1.05);
 }
+/* ==========================================================
+PROJECT VIDEO
+========================================================== */
 
+.project-card video {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    display: block;
+    background: #000;
+}
 /* ==========================================================
    PROJECT INFO
 ========================================================== */
@@ -2426,4 +2436,15 @@ a {
 
 .featured-projects .project-track {
     gap: 40px;
+}
+/* ==========================================
+Featured Project Video Fix
+========================================== */
+
+.featured-projects .project-card video {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    background: #000;
 }
