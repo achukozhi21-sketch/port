@@ -155,7 +155,7 @@ Design is more than just visuals — it is about storytelling, communication, an
         <article class="showcase-card video-card">
 
            <div class="video-wrapper">
-               <video muted loop playsinline>
+               <video preload="metadata" playsinline>
                    <source src="corporate video.mp4" type="video/mp4">
                </video>
 
@@ -171,12 +171,11 @@ Design is more than just visuals — it is about storytelling, communication, an
           </div>
 
       </article>
-      </article>
         <!-- Corporate Video -->
         <article class="showcase-card video-card">
 
            <div class="video-wrapper">
-               <video muted loop playsinline>
+               <video preload="metadata" playsinline>
                    <source src="animation 1.mp4" type="video/mp4">
                </video>
 
@@ -561,17 +560,20 @@ Design is more than just visuals — it is about storytelling, communication, an
 <div class="project-card image-only">
 <img src="temple2.webp" alt="brochure">
 </div>
-<!-- Project 1 -->
-<div class="project-card image-only">
-<img src="corporate video.mp4" alt="video">
+<div class="project-card video-card">
+    <video controls preload="metadata">
+        <source src="corporate video.mp4" type="video/mp4">
+    </video>
 </div>
-<!-- Project 1 -->
-<div class="project-card image-only">
-<img src="animation 1.mp4" alt="animation">
+<div class="project-card video-card">
+    <video controls preload="metadata">
+        <source src="animation 1.mp4" type="video/mp4">
+    </video>
 </div>
-<!-- Project 1 -->
-<div class="project-card image-only">
-<img src="animation 2.mp4" alt="animation">
+<div class="project-card video-card">
+    <video controls preload="metadata">
+        <source src="animation 2.mp4" type="video/mp4">
+    </video>
 </div>
 </div>
 </div>
@@ -739,10 +741,23 @@ const playButtons = document.querySelectorAll(".play-btn");
 
 playButtons.forEach(button => {
 
+    const video = button.parentElement.querySelector("video");
+
     button.addEventListener("click", () => {
 
-        const video = button.parentElement.querySelector("video");
+        // Pause all other videos
+        document.querySelectorAll(".video-wrapper video").forEach(v => {
+            if (v !== video) {
+                v.pause();
+                v.parentElement.querySelector(".play-btn").style.display = "flex";
+            }
+        });
 
+        video.play();
+        button.style.display = "none";
+    });
+
+    video.addEventListener("click", () => {
         if (video.paused) {
             video.play();
             button.style.display = "none";
@@ -750,7 +765,10 @@ playButtons.forEach(button => {
             video.pause();
             button.style.display = "flex";
         }
+    });
 
+    video.addEventListener("ended", () => {
+        button.style.display = "flex";
     });
 
 });
