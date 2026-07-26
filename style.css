@@ -2100,13 +2100,11 @@ body::after {
     font-size:24px;
 }
 .fiverr-icon {
-    font-size: 24px;
-    font-weight: 700;
-    font-family: Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: -1.5px;
     line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 /* ==========================================================
    FOOTER
