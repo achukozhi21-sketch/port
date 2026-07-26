@@ -2099,7 +2099,12 @@ body::after {
 .contact-icons i{
     font-size:24px;
 }
-
+.fiverr-icon {
+    font-size: 24px;
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+    text-transform: lowercase;
+}
 /* ==========================================================
    FOOTER
 ========================================================== */
