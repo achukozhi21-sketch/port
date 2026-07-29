@@ -583,13 +583,14 @@ SHOWCASE VIDEO
     object-fit: cover;
     display: block;
 }
-/* Animated video on the right */
 .showcase-card.reverse-video .video-wrapper {
-    order: 2;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .showcase-card.reverse-video .showcase-content {
-    order: 1;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 /* Play Button */
