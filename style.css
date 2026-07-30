@@ -528,22 +528,24 @@ body::after {
    ALTERNATING LAYOUT
 ========================================================== */
 
-.showcase-grid.single-column
-.showcase-card:nth-child(even) {
-    grid-template-columns: 1fr 1.25fr;
+/* ==========================================================
+ALTERNATING LAYOUT
+========================================================== */
+
+.showcase-grid.single-column .showcase-card:nth-child(even) {
+    grid-template-columns: 1.25fr 1fr;
 }
 
-.showcase-grid.single-column
-.showcase-card:nth-child(even) img {
-    order: 2;
+.showcase-grid.single-column .showcase-card:nth-child(even) img,
+.showcase-grid.single-column .showcase-card:nth-child(even) .video-wrapper {
+    grid-column: 2;
+    grid-row: 1;
 }
 
-.showcase-grid.single-column
-.showcase-card:nth-child(even)
-.showcase-content {
-    order: 1;
+.showcase-grid.single-column .showcase-card:nth-child(even) .showcase-content {
+    grid-column: 1;
+    grid-row: 1;
 }
-
 /* ==========================================================
    SHOWCASE IMAGE
 ========================================================== */
