@@ -2103,6 +2103,69 @@ PROJECT VIDEO
 }
 
 /* ==========================================================
+   BELIEF SECTION
+========================================================== */
+
+/* ...your existing Belief Section CSS... */
+
+
+/* ==========================================================
+   DESIGN QUOTE SECTION
+========================================================== */
+
+.design-quote{
+    padding: 70px 8%;
+    background: transparent;
+    text-align: center;
+}
+
+.quote-container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quote-icon{
+    display: block;
+    font-size: 60px;
+    color: #2b6777;
+    margin-bottom: 18px;
+    font-family: Georgia, serif;
+}
+
+.quote-container h2{
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #163b45;
+}
+
+.quote-container h2 span{
+    color: #2b6777;
+}
+
+.quote-line{
+    width: 90px;
+    height: 4px;
+    margin: 28px auto 0;
+    border-radius: 50px;
+    background: linear-gradient(90deg,#28c6df,#2b7488);
+}
+
+@media(max-width:768px){
+
+.quote-container h2{
+    font-size:30px;
+}
+
+.quote-icon{
+    font-size:46px;
+}
+
+}
+
+
+/* ==========================================================
    CONTACT SECTION
 ========================================================== */
 
